@@ -1,0 +1,4630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0710">
+<meta name="robots" content="noindex,nofollow">
+<title>Avalie sua experiência | Amambay Hotel Casino</title>
+<style>
+:root {
+  --bg:#08050d;
+  --bg-2:#100a17;
+  --panel:#1a1226;
+  --panel-2:#120b1c;
+  --field:#140d20;
+  --text:#f9f5ff;
+  --muted:#beb2cb;
+  --muted-2:#8f83a0;
+  --gold:#ff5dcb;
+  --gold-2:#fface9;
+  --gold-soft:rgba(255,93,203,.12);
+  --line:rgba(255,255,255,.08);
+  --line-gold:rgba(255,93,203,.24);
+  --red:#8f39ff;
+  --red-2:#ff3fb4;
+  --success:#b6f6cf;
+  --danger:#ff9bb8;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color-scheme:dark;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 50% 12%,rgba(255,142,223,.16),transparent 24%),
+    radial-gradient(circle at 12% 10%,rgba(154,80,255,.14),transparent 29%),
+    radial-gradient(circle at 88% 12%,rgba(255,63,180,.12),transparent 30%),
+    radial-gradient(circle at 50% 100%,rgba(92,39,145,.16),transparent 38%),
+    linear-gradient(180deg,#190b27 0%,#100817 40%,#0b0711 72%,#060409 100%);
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.04),transparent 20%,transparent 80%,rgba(255,255,255,.03)),
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.06),transparent 10%),
+    radial-gradient(circle at 80% 35%,rgba(255,255,255,.04),transparent 8%);
+  opacity:.6;
+}
+
+button,input,textarea{font:inherit}
+button{color:inherit}
+img{display:block;max-width:100%}
+
+.shell{
+  width:min(100%,820px);
+  margin:0 auto;
+  padding:40px 18px 48px;
+}
+.hero{
+  padding:8px 10px 28px;
+  text-align:center;
+}
+.logo{
+  width:min(180px,42vw);
+  margin:0 auto 22px;
+}
+.kicker{
+  margin:0 0 9px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+h1{
+  margin:0 auto;
+  max-width:650px;
+  font:500 clamp(34px,6vw,54px)/1.02 Georgia,"Times New Roman",serif;
+  letter-spacing:-.035em;
+}
+.hero p{
+  max-width:560px;
+  margin:15px auto 0;
+  color:#ddd2ea;
+  font-size:15px;
+  line-height:1.55;
+}
+
+.form-card{
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:30px;
+  background:linear-gradient(180deg,rgba(34,20,54,.96),rgba(17,11,29,.985));
+  box-shadow:0 32px 90px rgba(10,4,20,.46),0 0 0 1px rgba(255,255,255,.03);
+}
+.accent-line{
+  height:2px;
+  background:linear-gradient(90deg,transparent,rgba(255,93,203,.38),var(--red-2),rgba(143,57,255,.52),transparent);
+}
+.form-body{padding:32px 34px 34px}
+
+.section{
+  padding:0 0 29px;
+}
+.section + .section{
+  padding-top:29px;
+  border-top:1px solid var(--line);
+}
+.section-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:20px;
+}
+.section-title{
+  margin:0;
+  font:500 25px/1.12 Georgia,"Times New Roman",serif;
+}
+.section-desc{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+.step{
+  flex:0 0 auto;
+  width:40px;height:40px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:50%;
+  display:grid;place-items:center;
+  color:#ffb8ec;
+  font:800 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:rgba(255,255,255,.026);
+}
+
+.fields{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.field{min-width:0}
+.field.full{grid-column:1/-1}
+.label{
+  display:block;
+  margin:0 0 8px;
+  color:#efe7df;
+  font-size:13px;
+  font-weight:800;
+}
+.input,.textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.11);
+  outline:none;
+  border-radius:15px;
+  background:var(--field);
+  color:var(--text);
+  transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.input{
+  height:54px;
+  padding:0 15px;
+  font-size:16px;
+}
+.textarea{
+  min-height:130px;
+  padding:15px 15px 36px;
+  line-height:1.5;
+  resize:vertical;
+}
+.input::placeholder,.textarea::placeholder{color:#655b57}
+.input:hover,.textarea:hover{border-color:rgba(216,181,95,.26)}
+.input:focus,.textarea:focus{
+  border-color:rgba(216,181,95,.75);
+  box-shadow:0 0 0 3px rgba(216,181,95,.09);
+  background:#0f0a18;
+}
+.input.invalid,.textarea.invalid{
+  border-color:rgba(255,156,163,.72);
+  box-shadow:0 0 0 3px rgba(255,156,163,.07);
+}
+
+/* WhatsApp com bandeirinhas no próprio número */
+.phone-box{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  min-height:54px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:15px;
+  background:var(--field);
+  overflow:hidden;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.phone-box:focus-within{
+  border-color:rgba(216,181,95,.75);
+  box-shadow:0 0 0 3px rgba(216,181,95,.09);
+}
+.phone-box.invalid{
+  border-color:rgba(255,156,163,.72);
+  box-shadow:0 0 0 3px rgba(255,156,163,.07);
+}
+.country-switch{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  padding:6px 8px;
+  border-right:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.015);
+}
+.country-btn{
+  width:39px;height:39px;
+  border:1px solid transparent;
+  border-radius:11px;
+  background:transparent;
+  display:grid;place-items:center;
+  cursor:pointer;
+  font-size:21px;
+  opacity:.48;
+  transition:.15s ease;
+}
+.country-btn:hover{opacity:.8;background:rgba(255,255,255,.025)}
+.country-btn.active{
+  opacity:1;
+  border-color:var(--line-gold);
+  background:var(--gold-soft);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+}
+.phone-input{
+  width:100%;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+  padding:0 15px;
+  font-size:16px;
+}
+.phone-input::placeholder{color:#655b57}
+.phone-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:8px;
+  padding-left:4px;
+  color:var(--muted-2);
+  font-size:11px;
+}
+.phone-status.valid{color:var(--success);font-weight:800}
+.phone-status.invalid{color:var(--danger);font-weight:800}
+
+.error{
+  min-height:0;
+  margin:7px 1px 0;
+  color:var(--danger);
+  font-size:12px;
+  font-weight:750;
+  line-height:1.35;
+}
+
+/* TELEFONE REFEITO DO ZERO */
+.phone-field{
+  position:relative;
+}
+.phone-control{
+  display:grid;
+  grid-template-columns:118px 1fr;
+  min-height:58px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008)),
+    #161112;
+  overflow:visible;
+  transition:border-color .18s ease,box-shadow .18s ease,background .18s ease,transform .18s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 10px 26px rgba(0,0,0,.14);
+}
+.phone-control:focus-within{
+  border-color:rgba(216,181,95,.78);
+  box-shadow:0 0 0 3px rgba(216,181,95,.09);
+  background:#0f0a18;
+}
+.phone-control.invalid{
+  border-color:rgba(255,156,163,.76);
+  box-shadow:0 0 0 3px rgba(255,156,163,.08);
+}
+.phone-country{
+  position:relative;
+  border-right:1px solid rgba(255,255,255,.06);
+}
+.phone-country-btn{
+  width:100%;
+  height:100%;
+  min-height:56px;
+  border:0;
+  border-radius:21px 0 0 21px;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:0 12px;
+  cursor:pointer;
+  color:var(--text);
+}
+.phone-country-btn:hover{
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+}
+.phone-country-flag{
+  width:24px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.10);
+  flex:0 0 auto;
+}
+.phone-country-emoji{
+  display:none;
+  font-size:22px;
+  line-height:1;
+  flex:0 0 auto;
+}
+.phone-country-flag.failed + .phone-country-emoji{display:inline-block}
+.phone-country-dial{
+  color:#ffb8ec;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.01em;
+}
+.phone-country-arrow{
+  color:#83766f;
+  font-size:9px;
+  margin-left:1px;
+}
+.phone-country-menu{
+  position:absolute;
+  z-index:100;
+  left:0;
+  top:calc(100% + 8px);
+  width:300px;
+  max-width:85vw;
+  max-height:320px;
+  overflow:auto;
+  display:none;
+  padding:8px;
+  border:1px solid rgba(216,181,95,.32);
+  border-radius:15px;
+  background:#130c20;
+  box-shadow:0 24px 60px rgba(0,0,0,.58);
+}
+.phone-country-menu.open{
+  display:block;
+}
+.phone-country-search{
+  width:100%;
+  height:42px;
+  margin:0 0 7px;
+  padding:0 11px;
+  border:1px solid rgba(255,255,255,.09);
+  outline:0;
+  border-radius:10px;
+  background:#0f0a18;
+  color:var(--text);
+}
+.phone-country-search:focus{
+  border-color:rgba(216,181,95,.55);
+}
+.phone-country-list{
+  display:grid;
+  gap:2px;
+}
+.phone-country-option{
+  width:100%;
+  min-height:44px;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  display:grid;
+  grid-template-columns:30px 1fr auto;
+  align-items:center;
+  gap:9px;
+  padding:7px 10px;
+  color:var(--text);
+  text-align:left;
+  cursor:pointer;
+}
+.phone-country-option:hover,
+.phone-country-option.active{
+  background:rgba(255,93,203,.10);
+}
+.phone-country-option .flag-img{
+  width:24px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.10);
+}
+.phone-country-option .flag-emoji{
+  display:none;
+  font-size:20px;
+}
+.phone-country-option .flag-img.failed + .flag-emoji{display:inline-block}
+.phone-country-option .country-name{
+  font-size:12px;
+  font-weight:800;
+}
+.phone-country-option .dial{
+  color:#a89a91;
+  font-size:11px;
+  font-weight:900;
+}
+.phone-number-input{
+  width:100%;
+  min-width:0;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+  padding:0 18px;
+  font-size:16px;
+}
+.phone-number-input::placeholder{
+  color:#655b57;
+}
+.phone-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:8px;
+  padding-left:4px;
+  color:var(--muted-2);
+  font-size:11px;
+}
+@media(max-width:650px){
+  .phone-control{grid-template-columns:104px 1fr}
+  .phone-country-menu{width:min(300px,88vw)}
+}
+
+
+/* V19 — confirmação visual discreta do país detectado pelo número */
+.phone-control.country-detected{
+  animation:phoneCountryDetected .52s cubic-bezier(.2,.8,.25,1);
+}
+@keyframes phoneCountryDetected{
+  0%{box-shadow:0 0 0 0 rgba(255,93,203,0)}
+  45%{box-shadow:0 0 0 4px rgba(255,93,203,.11),0 10px 30px rgba(143,57,255,.16)}
+  100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.03),0 10px 26px rgba(0,0,0,.14)}
+}
+.phone-status.valid{
+  letter-spacing:.005em;
+}
+
+/* Avaliação crescente: uma régua contínua, não cinco botões separados */
+.ratings{display:grid;gap:14px}
+.rating-row{
+  padding:18px 18px 16px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:19px;
+  background:linear-gradient(180deg,rgba(34,26,28,.72),rgba(22,18,19,.48));
+  transition:border-color .18s ease,background .18s ease;
+}
+.rating-row.has-value{
+  border-color:rgba(216,181,95,.34);
+  background:linear-gradient(180deg,rgba(216,181,95,.045),rgba(12,9,10,.48));
+}
+.rating-row-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:15px;
+}
+.rating-name{
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:-.01em;
+}
+.rating-result{
+  flex:0 0 auto;
+  min-width:84px;
+  text-align:right;
+  color:#7e746f;
+  font-size:11px;
+  font-weight:800;
+}
+.rating-row.has-value .rating-result{color:var(--gold-2)}
+
+.rating-scale{
+  position:relative;
+  height:70px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  align-items:end;
+  gap:0;
+  border-radius:15px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.015),rgba(255,255,255,.008)),
+    linear-gradient(90deg,rgba(216,181,95,.02),rgba(216,181,95,.07));
+  border:1px solid rgba(216,181,95,.11);
+  overflow:hidden;
+  touch-action:none;
+  cursor:pointer;
+  user-select:none;
+}
+.rating-scale::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:14px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(216,181,95,.08),rgba(216,181,95,.34));
+}
+.scale-segment{
+  position:relative;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom:11px;
+}
+.scale-segment:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;top:10px;bottom:10px;
+  width:1px;
+  background:rgba(255,255,255,.045);
+}
+.grow-star{
+  position:relative;
+  z-index:1;
+  color:#5b4a2a;
+  line-height:1;
+  transform-origin:50% 100%;
+  transition:color .16s ease,filter .16s ease,transform .16s ease,opacity .16s ease;
+  opacity:.78;
+}
+.scale-segment:nth-child(1) .grow-star{font-size:20px}
+.scale-segment:nth-child(2) .grow-star{font-size:24px}
+.scale-segment:nth-child(3) .grow-star{font-size:29px}
+.scale-segment:nth-child(4) .grow-star{font-size:35px}
+.scale-segment:nth-child(5) .grow-star{font-size:42px}
+.scale-segment.active .grow-star{
+  color:var(--gold);
+  opacity:1;
+  filter:drop-shadow(0 0 8px rgba(216,181,95,.20));
+  transform:translateY(-1px);
+}
+.scale-segment.preview .grow-star{color:#a98a48;opacity:1}
+.rating-hints{
+  display:flex;
+  justify-content:space-between;
+  margin-top:7px;
+  color:#706661;
+  font-size:10px;
+  font-weight:750;
+}
+.rating-instruction{
+  margin:0 0 16px;
+  padding:11px 13px;
+  border-left:2px solid rgba(255,93,203,.55);
+  border-radius:0 12px 12px 0;
+  background:rgba(255,93,203,.05);
+  color:#b9ada5;
+  font-size:12px;
+  line-height:1.45;
+}
+
+.comment-wrap{position:relative}
+.char-count{
+  position:absolute;
+  right:13px;
+  bottom:10px;
+  color:#8e837d;
+  font:700 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+.submit{
+  width:100%;
+  min-height:58px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  background:linear-gradient(135deg,#ff3fb4 0%,#b545ff 55%,#7d4dff 100%);
+  color:#fff;
+  box-shadow:0 14px 30px rgba(181,69,255,.28),inset 0 1px 0 rgba(255,255,255,.16);
+  cursor:pointer;
+  font-size:15px;
+  font-weight:900;
+  transition:transform .14s ease,filter .14s ease,box-shadow .14s ease;
+}
+.submit:hover{filter:brightness(1.08);box-shadow:0 18px 38px rgba(181,69,255,.36),inset 0 1px 0 rgba(255,255,255,.15)}
+.submit:active{transform:translateY(1px)}
+.submit:disabled{opacity:.58;cursor:wait}
+.submit .busy{display:none}
+.submit.loading .normal{display:none}
+.submit.loading .busy{display:inline-flex;align-items:center;gap:8px}
+.spinner{
+  width:14px;height:14px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);border-top-color:#fff;
+  animation:spin .75s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note{
+  margin:12px auto 0;
+  max-width:520px;
+  color:#8a7f79;
+  text-align:center;
+  font-size:11px;
+  line-height:1.5;
+}
+.success{
+  display:none;
+  padding:56px 34px 60px;
+  text-align:center;
+}
+.success.show{display:block}
+form.hide{display:none}
+.success-icon{
+  width:62px;height:62px;margin:0 auto 20px;
+  display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:50%;
+  color:var(--gold);
+  background:rgba(216,181,95,.06);
+  font-size:27px;
+}
+.success h2{
+  margin:0;
+  font:500 34px/1.08 Georgia,"Times New Roman",serif;
+}
+.success p{
+  max-width:450px;
+  margin:12px auto 0;
+  color:var(--muted);
+  line-height:1.55;
+}
+.footer{
+  margin-top:22px;
+  color:#8e837d;
+  text-align:center;
+  font-size:10px;
+  line-height:1.5;
+}
+.bot-field,.sr-only{
+  position:absolute!important;
+  width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;
+  overflow:hidden!important;clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;border:0!important;
+}
+
+@media(max-width:650px){
+  .shell{padding:28px 11px 32px}
+  .hero{padding-bottom:22px}
+  .logo{width:min(165px,46vw);margin-bottom:18px}
+  h1{font-size:clamp(35px,11vw,48px)}
+  .hero p{font-size:14px;padding:0 5px}
+  .form-card{border-radius:23px}
+  .form-body{padding:25px 17px 24px}
+  .section{padding-bottom:25px}
+  .section + .section{padding-top:25px}
+  .section-title{font-size:23px}
+  .fields{grid-template-columns:1fr;gap:16px}
+  .rating-row{padding:16px 11px 14px}
+  .rating-scale{height:67px}
+  .scale-segment:nth-child(1) .grow-star{font-size:18px}
+  .scale-segment:nth-child(2) .grow-star{font-size:22px}
+  .scale-segment:nth-child(3) .grow-star{font-size:27px}
+  .scale-segment:nth-child(4) .grow-star{font-size:32px}
+  .scale-segment:nth-child(5) .grow-star{font-size:39px}
+  .phone-box{grid-template-columns:auto 1fr}
+  .country-switch{padding-left:6px;padding-right:6px}
+  .country-btn{width:36px;height:38px;font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* EXPERIÊNCIA DE AVALIAÇÃO V10 */
+.review-intro{
+  margin:0 0 18px;
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.012));
+  color:#b9ada5;
+  font-size:12px;
+  line-height:1.5;
+}
+.overall-rating{
+  margin-bottom:17px;
+  padding:22px 18px 19px;
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:21px;
+  background:
+    radial-gradient(circle at 50% 100%,rgba(167,23,45,.08),transparent 52%),
+    linear-gradient(180deg,rgba(41,30,33,.82),rgba(23,18,19,.68));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+.overall-top{
+  text-align:center;
+  margin-bottom:16px;
+}
+.overall-title{
+  margin:0;
+  font:500 24px/1.12 Georgia,"Times New Roman",serif;
+}
+.overall-copy{
+  margin:6px 0 0;
+  color:#ac9f98;
+  font-size:11px;
+}
+.overall-result{
+  min-height:25px;
+  margin-top:12px;
+  color:#ac9f98;
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.01em;
+}
+.overall-rating.has-value .overall-result{
+  color:#ffb8ec;
+}
+.overall-scale{
+  position:relative;
+  height:92px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  align-items:end;
+  gap:0;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 50% 115%,rgba(167,23,45,.055),transparent 46%),
+    rgba(255,255,255,.01);
+  overflow:hidden;
+  cursor:pointer;
+  user-select:none;
+  touch-action:none;
+}
+.overall-segment{
+  position:relative;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom:15px;
+}
+.overall-segment:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;top:13px;bottom:13px;width:1px;
+  background:rgba(255,255,255,.04);
+}
+.overall-star{
+  position:relative;
+  z-index:1;
+  color:#4f4944;
+  line-height:1;
+  opacity:.58;
+  transform-origin:50% 100%;
+  transition:transform .16s ease,color .16s ease,filter .16s ease,opacity .16s ease,text-shadow .16s ease;
+}
+.overall-segment:nth-child(1) .overall-star{font-size:25px}
+.overall-segment:nth-child(2) .overall-star{font-size:32px}
+.overall-segment:nth-child(3) .overall-star{font-size:40px}
+.overall-segment:nth-child(4) .overall-star{font-size:50px}
+.overall-segment:nth-child(5) .overall-star{font-size:62px}
+.overall-segment.active .overall-star{
+  color:#ffb8ec;
+  opacity:1;
+  transform:translateY(-2px);
+  filter:drop-shadow(0 0 5px rgba(214,192,142,.28));
+  text-shadow:0 0 10px rgba(214,192,142,.18);
+}
+.overall-rating[data-score="1"] .overall-segment.active .overall-star{color:#b9aaa2;filter:none;text-shadow:none}
+.overall-rating[data-score="2"] .overall-segment.active .overall-star{color:#c7b7a5;filter:drop-shadow(0 0 3px rgba(199,183,165,.15))}
+.overall-rating[data-score="3"] .overall-segment.active .overall-star{color:#d2c2a4;filter:drop-shadow(0 0 4px rgba(210,194,164,.18))}
+.overall-rating[data-score="4"] .overall-segment.active .overall-star{color:#dfc98e;filter:drop-shadow(0 0 6px rgba(223,201,142,.25))}
+.overall-rating[data-score="5"] .overall-segment.active .overall-star{
+  color:#f0cf69;
+  filter:drop-shadow(0 0 7px rgba(240,207,105,.42));
+  text-shadow:0 0 12px rgba(240,207,105,.30);
+}
+.overall-segment.preview .overall-star{
+  color:#ffb8ec;
+  opacity:.95;
+  filter:drop-shadow(0 0 4px rgba(201,185,143,.2));
+}
+.overall-hints{
+  display:flex;
+  justify-content:space-between;
+  margin-top:8px;
+  color:#6f645f;
+  font-size:10px;
+  font-weight:800;
+}
+
+/* categorias ficam mais discretas que a nota geral */
+.detail-label{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:20px 1px 10px;
+}
+.detail-label strong{
+  color:#e7ddd5;
+  font-size:12px;
+  letter-spacing:.02em;
+}
+.detail-label span{
+  color:#756a64;
+  font-size:10px;
+}
+.rating-row{
+  padding:15px 16px 13px;
+}
+.rating-scale{
+  height:62px;
+}
+.grow-star{
+  color:#4a4541;
+  opacity:.6;
+}
+.scale-segment.active .grow-star{
+  color:#ffb8ec;
+  filter:drop-shadow(0 0 4px rgba(216,199,157,.18));
+  text-shadow:none;
+}
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  color:#ffd4f3;
+  filter:drop-shadow(0 0 5px rgba(235,207,118,.26));
+  text-shadow:0 0 8px rgba(235,207,118,.12);
+}
+.scale-segment.preview .grow-star{
+  color:#bfae88;
+}
+
+/* chips de contexto */
+.feedback-followup{
+  display:none;
+  margin-top:17px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:17px;
+  background:rgba(255,255,255,.02);
+}
+.feedback-followup.show{display:block}
+.followup-title{
+  margin:0 0 5px;
+  color:#ece2da;
+  font-size:13px;
+  font-weight:900;
+}
+.followup-copy{
+  margin:0 0 12px;
+  color:#9a8e88;
+  font-size:11px;
+}
+.feedback-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.feedback-chip{
+  position:relative;
+}
+.feedback-chip input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.feedback-chip label{
+  min-height:37px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:999px;
+  background:rgba(255,255,255,.02);
+  color:#aaa09a;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+  transition:.15s ease;
+}
+.feedback-chip label:hover{
+  border-color:rgba(216,181,95,.26);
+  color:#d5c7ba;
+}
+.feedback-chip input:checked + label{
+  color:#ffd2f1;
+  border-color:rgba(255,93,203,.47);
+  background:rgba(255,93,203,.11);
+  box-shadow:0 0 0 2px rgba(216,181,95,.035);
+}
+.comment-prompt{
+  margin:0 0 10px;
+  padding:10px 12px;
+  border-left:2px solid rgba(184,151,84,.28);
+  border-radius:0 10px 10px 0;
+  background:rgba(255,255,255,.02);
+  color:#998d86;
+  font-size:11px;
+  line-height:1.45;
+}
+@media(max-width:650px){
+  .overall-rating{padding:19px 11px 17px}
+  .overall-scale{height:83px}
+  .overall-segment:nth-child(1) .overall-star{font-size:22px}
+  .overall-segment:nth-child(2) .overall-star{font-size:29px}
+  .overall-segment:nth-child(3) .overall-star{font-size:36px}
+  .overall-segment:nth-child(4) .overall-star{font-size:45px}
+  .overall-segment:nth-child(5) .overall-star{font-size:55px}
+  .feedback-chip label{padding:0 10px;font-size:10px}
+}
+
+/* EFEITOS 5 ESTRELAS — OTIMIZADOS PARA FLUIDEZ */
+@keyframes fiveStarFloat{
+  0%,100%{transform:translate3d(0,-1px,0) scale(1)}
+  50%{transform:translate3d(0,-3px,0) scale(1.045)}
+}
+@keyframes sparkleFloat{
+  0%{transform:translate3d(0,4px,0) scale(.72) rotate(0deg);opacity:0}
+  18%{opacity:.9}
+  60%{opacity:.95}
+  100%{transform:translate3d(0,-13px,0) scale(1.08) rotate(18deg);opacity:0}
+}
+@keyframes shimmerSweep{
+  0%{transform:translate3d(-140%,0,0)}
+  100%{transform:translate3d(240%,0,0)}
+}
+.overall-rating,
+.rating-row{
+  position:relative;
+  contain:paint;
+}
+.overall-star,
+.grow-star{
+  backface-visibility:hidden;
+  transform:translateZ(0);
+  will-change:transform,opacity;
+}
+.overall-rating.five-star::before,
+.overall-rating.five-star::after,
+.rating-row.five-star::before,
+.rating-row.five-star::after{
+  content:"✦";
+  position:absolute;
+  pointer-events:none;
+  z-index:3;
+  opacity:0;
+  color:#f2d67f;
+  text-shadow:0 0 6px rgba(240,207,105,.25);
+  will-change:transform,opacity;
+  backface-visibility:hidden;
+}
+.overall-rating.five-star::before,
+.rating-row.five-star::before{
+  top:16px;
+  right:18px;
+  font-size:13px;
+  animation:sparkleFloat 2.4s cubic-bezier(.22,.61,.36,1) infinite;
+}
+.overall-rating.five-star::after,
+.rating-row.five-star::after{
+  top:30px;
+  right:44px;
+  font-size:9px;
+  animation:sparkleFloat 2.9s cubic-bezier(.22,.61,.36,1) .45s infinite;
+}
+.overall-rating.five-star .overall-scale::after,
+.rating-row.five-star .rating-scale::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:28%;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.085),transparent);
+  transform:translate3d(-140%,0,0);
+  will-change:transform;
+  animation:shimmerSweep 3.1s linear infinite;
+}
+.overall-rating[data-score="5"] .overall-segment.active .overall-star{
+  animation:fiveStarFloat 2.2s cubic-bezier(.4,0,.2,1) infinite;
+}
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  animation:fiveStarFloat 2.35s cubic-bezier(.4,0,.2,1) infinite;
+}
+.overall-rating[data-score="5"]{
+  box-shadow:0 0 0 1px rgba(240,207,105,.08), inset 0 1px 0 rgba(255,255,255,.025);
+}
+.rating-row[data-score="5"]{
+  box-shadow:0 0 0 1px rgba(240,207,105,.06), inset 0 1px 0 rgba(255,255,255,.018);
+}
+@media(prefers-reduced-motion:reduce){
+  .overall-rating[data-score="5"] .overall-segment.active .overall-star,
+  .rating-row[data-score="5"] .scale-segment.active .grow-star,
+  .overall-rating.five-star::before,
+  .overall-rating.five-star::after,
+  .rating-row.five-star::before,
+  .rating-row.five-star::after,
+  .overall-rating.five-star .overall-scale::after,
+  .rating-row.five-star .rating-scale::after{
+    animation:none!important;
+  }
+}
+
+/* V16 — REFINO DA ÁREA DE DADOS */
+.section-profile{
+  position:relative;
+}
+.section-profile .section-head{
+  margin-bottom:14px;
+}
+.section-profile .section-title{
+  font-size:27px;
+}
+.section-profile .step{
+  width:44px;
+  height:44px;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));
+}
+.profile-intro{
+  margin:0 0 16px;
+  padding:13px 15px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.024),rgba(255,255,255,.01));
+  color:#aa9e98;
+  font-size:12px;
+  line-height:1.5;
+}
+.profile-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.field-card{
+  position:relative;
+  min-width:0;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,255,255,.03),transparent 32%),
+    linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,.008));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 16px 36px rgba(0,0,0,.10);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.field-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.11);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 18px 40px rgba(0,0,0,.14);
+}
+.field-card:focus-within{
+  border-color:rgba(207,29,59,.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 0 0 1px rgba(207,29,59,.12),
+    0 18px 42px rgba(0,0,0,.16);
+}
+.field-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
+}
+.section-profile .label{
+  margin:0;
+  padding:0;
+  color:#f4ebe3;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.01em;
+}
+.field-icon{
+  flex:0 0 auto;
+  min-width:38px;
+  height:38px;
+  padding:0 11px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#fface9;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.field-helper{
+  margin:0 0 12px;
+  color:#978a84;
+  font-size:12px;
+  line-height:1.5;
+}
+.input-shell{
+  margin-top:2px;
+}
+.section-profile .input{
+  height:60px;
+  border-radius:20px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.026),rgba(255,255,255,.008)),
+    rgba(16,12,13,.82);
+}
+.section-profile .phone-field{
+  margin-top:2px;
+}
+.section-profile .phone-control{
+  min-height:60px;
+  border-radius:20px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.008)),
+    rgba(16,12,13,.84);
+}
+.section-profile .phone-country-btn{
+  min-height:58px;
+  border-radius:19px 0 0 19px;
+}
+.section-profile .phone-meta{
+  margin-top:9px;
+}
+.section-profile .error{
+  margin-top:8px;
+}
+@media(max-width:760px){
+  .profile-grid{
+    grid-template-columns:1fr;
+  }
+  .field-card{
+    padding:16px;
+    border-radius:24px;
+  }
+  .section-profile .section-title{
+    font-size:25px;
+  }
+}
+
+@media(min-width:760px){
+  .ratings{grid-template-columns:1fr 1fr}
+}
+@media(max-width:759px){
+  .ratings{grid-template-columns:1fr}
+}
+
+/* SELETOR DE IDIOMA — PT / ES / EN / GUARANI */
+.language-switch{
+  position:fixed;top:14px;right:14px;z-index:9999;
+  min-width:92px;
+}
+.language-trigger{
+  width:100%;height:44px;border:1px solid rgba(255,255,255,.12);border-radius:999px;
+  padding:0 12px;background:rgba(18,10,29,.88);backdrop-filter:blur(14px);
+  color:#f8ecff;display:flex;align-items:center;justify-content:space-between;gap:9px;
+  box-shadow:0 10px 28px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.035);
+  cursor:pointer;font-size:11px;font-weight:900;letter-spacing:.04em;
+}
+.language-trigger:hover{border-color:rgba(255,93,203,.26);background:rgba(25,13,40,.92)}
+.language-current{display:flex;align-items:center;gap:7px}
+.lang-flag{width:22px;height:15px;display:block;flex:0 0 auto;border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.language-current{display:flex;align-items:center;gap:7px}
+.language-option{grid-template-columns:26px 1fr auto!important}
+.language-option .lang-flag{width:22px;height:15px}
+
+.language-arrow{font-size:9px;color:#a990b6;transition:transform .18s ease}
+.language-switch.open .language-arrow{transform:rotate(180deg)}
+.language-menu{
+  position:absolute;top:calc(100% + 8px);right:0;width:210px;
+  display:none;padding:7px;border:1px solid rgba(255,255,255,.11);border-radius:18px;
+  background:rgba(18,10,29,.96);backdrop-filter:blur(18px);
+  box-shadow:0 22px 60px rgba(0,0,0,.42);
+}
+.language-switch.open .language-menu{display:grid;gap:3px;animation:langPop .16s ease-out}
+@keyframes langPop{from{opacity:0;transform:translateY(-5px) scale(.98)}to{opacity:1;transform:none}}
+.language-option{
+  width:100%;min-height:45px;border:0;border-radius:12px;background:transparent;
+  color:#c9b9d4;padding:7px 10px;display:grid;grid-template-columns:1fr auto;
+  align-items:center;gap:8px;text-align:left;cursor:pointer;
+}
+.language-option:hover{background:rgba(255,255,255,.045);color:#fff}
+.language-option.active{background:linear-gradient(90deg,rgba(255,93,203,.13),rgba(143,57,255,.09));color:#ffd2f1;box-shadow:inset 0 0 0 1px rgba(255,93,203,.15)}
+.language-option .lang-name{font-size:11px;font-weight:900}
+.language-option .lang-code{font-size:9px;font-weight:900;color:#8f7e9d;letter-spacing:.08em}
+.language-option.active .lang-code{color:#d9acd0}
+@media(max-width:650px){
+  .language-switch{top:8px;right:8px;min-width:88px}
+  .language-trigger{height:40px;padding:0 10px}
+  .language-menu{width:min(205px,72vw)}
+}
+
+/* V17 — intenção de retorno + refinamento mobile */
+.return-card{
+  margin-top:18px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(216,181,95,.045),transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.024),rgba(255,255,255,.009));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+.return-title{margin:0;font:500 22px/1.15 Georgia,"Times New Roman",serif}
+.return-copy{margin:7px 0 14px;color:var(--muted);font-size:12px;line-height:1.45}
+.return-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.return-option{position:relative}
+.return-option input{position:absolute;opacity:0;pointer-events:none}
+.return-option label{
+  min-height:48px;display:flex;align-items:center;justify-content:center;padding:8px 10px;
+  border:1px solid rgba(255,255,255,.09);border-radius:14px;background:rgba(255,255,255,.026);
+  color:#b7aaa3;font-size:12px;font-weight:900;cursor:pointer;transition:.16s ease;user-select:none
+}
+.return-option label:hover{border-color:rgba(216,181,95,.28);color:#e5d8cf;transform:translateY(-1px)}
+.return-option input:checked + label{
+  color:#ffd2f1;border-color:rgba(255,93,203,.48);
+  background:linear-gradient(180deg,rgba(255,93,203,.14),rgba(143,57,255,.07));
+  box-shadow:0 0 0 2px rgba(255,93,203,.05),inset 0 1px 0 rgba(255,255,255,.035)
+}
+.return-card.invalid{border-color:rgba(255,156,163,.62);box-shadow:0 0 0 3px rgba(255,156,163,.055)}
+@media(max-width:650px){
+  .shell{width:100%;padding:22px 9px 28px}
+  .form-body{padding:23px 14px 22px}
+  .profile-grid{gap:13px}
+  .field-card{padding:14px;border-radius:21px}
+  .phone-control{grid-template-columns:101px minmax(0,1fr)}
+  .phone-country-btn{padding:0 8px;gap:6px}
+  .phone-number-input{padding:0 12px;font-size:16px}
+  .phone-country-menu{
+    position:fixed;left:10px;right:10px;top:72px;width:auto;max-width:none;
+    max-height:min(62vh,440px);border-radius:18px
+  }
+  .return-card{padding:15px;border-radius:19px}
+  .return-title{font-size:20px}
+  .return-options{gap:7px}
+  .return-option label{min-height:46px;padding:7px 6px;font-size:11px}
+  .submit{min-height:56px}
+}
+
+
+.hero{
+  padding-top:18px;
+}
+.kicker{
+  color:#ffb8ec;
+  text-shadow:0 0 12px rgba(255,93,203,.22);
+}
+.form-card,
+.field-card,
+.rating-row,
+.overall-rating,
+.return-card{
+  backdrop-filter:blur(12px);
+}
+.section-title,
+.overall-title,
+.return-title,
+.success h2,
+h1{
+  color:#fff5fe;
+}
+.note,.footer,.section-desc,.review-intro,.field-helper,.return-copy,.overall-copy,.followup-copy,.hero p{
+  color:#cdbfdd;
+}
+@media(min-width:900px){
+  .shell{padding-top:48px;padding-bottom:56px}
+}
+@media(max-width:650px){
+  body{background-attachment:scroll}
+  .hero{padding-top:10px}
+  h1{line-height:1.04}
+  .form-card{border-radius:22px}
+}
+
+
+/* V18 — botão vivo + confirmação e retorno automático */
+.submit{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background-size:180% 180%;
+  animation:submitGradient 4.8s ease infinite,submitGlow 2.8s ease-in-out infinite;
+}
+.submit::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-45% -20%;
+  background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.36) 48%,rgba(255,255,255,.12) 54%,transparent 68%);
+  transform:translateX(-70%) rotate(2deg);
+  animation:submitShine 3.2s cubic-bezier(.4,0,.2,1) infinite;
+  pointer-events:none;
+}
+.submit::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:15px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.20),inset 0 -1px 0 rgba(55,10,88,.18);
+  pointer-events:none;
+}
+.submit:hover{transform:translateY(-2px) scale(1.006)}
+.submit:active{transform:translateY(0) scale(.995)}
+.submit.loading{
+  animation:submitGradient 2.2s ease infinite,submitLoadingPulse 1s ease-in-out infinite;
+}
+.submit.loading::before{animation:submitShine 1.15s linear infinite}
+@keyframes submitGradient{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+@keyframes submitGlow{
+  0%,100%{box-shadow:0 14px 32px rgba(181,69,255,.28),0 0 0 0 rgba(255,63,180,0),inset 0 1px 0 rgba(255,255,255,.16)}
+  50%{box-shadow:0 18px 44px rgba(181,69,255,.40),0 0 28px rgba(255,63,180,.17),inset 0 1px 0 rgba(255,255,255,.19)}
+}
+@keyframes submitShine{
+  0%,52%{transform:translateX(-85%) rotate(2deg)}
+  78%,100%{transform:translateX(85%) rotate(2deg)}
+}
+@keyframes submitLoadingPulse{
+  0%,100%{filter:brightness(1)}
+  50%{filter:brightness(1.13)}
+}
+.success.show{
+  animation:successReveal .48s cubic-bezier(.2,.75,.25,1) both;
+}
+.success-icon{
+  position:relative;
+  animation:successIcon .7s cubic-bezier(.2,.9,.25,1.15) both;
+  box-shadow:0 0 0 8px rgba(255,93,203,.05),0 0 34px rgba(143,57,255,.18);
+}
+.success-return{
+  width:min(360px,92%);
+  margin:24px auto 0;
+  color:#d8c9e7;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.success-progress{
+  height:4px;
+  margin-top:10px;
+  overflow:hidden;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+}
+.success-progress i{
+  display:block;
+  width:100%;height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#ff3fb4,#c944ff,#7d4dff);
+  transform-origin:left center;
+  animation:successCountdown 3.2s linear forwards;
+}
+@keyframes successReveal{
+  from{opacity:0;transform:translateY(10px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+@keyframes successIcon{
+  0%{opacity:0;transform:scale(.55) rotate(-8deg)}
+  70%{opacity:1;transform:scale(1.08) rotate(2deg)}
+  100%{opacity:1;transform:scale(1) rotate(0)}
+}
+@keyframes successCountdown{
+  from{transform:scaleX(1)}
+  to{transform:scaleX(0)}
+}
+@media(max-width:650px){
+  .submit{min-height:58px;border-radius:17px}
+  .success{padding:48px 20px 52px}
+}
+@media(prefers-reduced-motion:reduce){
+  .submit,.submit::before,.submit.loading,.success.show,.success-icon,.success-progress i{animation:none!important}
+}
+
+
+.required-mark{color:var(--red-2);font-family:Inter,Arial,sans-serif;font-size:.72em;vertical-align:top;text-shadow:0 0 10px rgba(255,63,180,.25)}
+.textarea.invalid{border-color:rgba(255,156,163,.72)!important;box-shadow:0 0 0 3px rgba(255,156,163,.07)!important}
+
+/* V24 — CORREÇÃO DAS ESTRELAS + FLUIDEZ */
+.overall-star,
+.grow-star{
+  display:inline-block !important;
+  visibility:visible !important;
+  opacity:.82 !important;
+  font-family:Arial,"Segoe UI Symbol","Noto Sans Symbols 2",sans-serif !important;
+  font-weight:900;
+  color:#6f6178 !important;
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+  backface-visibility:hidden;
+  transform:translate3d(0,0,0);
+  will-change:auto;
+}
+
+.overall-segment.active .overall-star,
+.scale-segment.active .grow-star{
+  opacity:1 !important;
+  color:#ffb8ec !important;
+  filter:drop-shadow(0 0 7px rgba(255,93,203,.28)) !important;
+}
+
+.overall-segment.preview .overall-star,
+.scale-segment.preview .grow-star{
+  opacity:1 !important;
+  color:#dc8fd2 !important;
+}
+
+.overall-rating[data-score="5"] .overall-segment.active .overall-star,
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  color:#ffd4f3 !important;
+  filter:drop-shadow(0 0 8px rgba(255,93,203,.34)) !important;
+}
+
+/* Áreas de nota ficam mais leves no toque/arraste */
+.overall-scale,
+.rating-scale{
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  transform:translateZ(0);
+  contain:layout paint;
+}
+
+.overall-segment,
+.scale-segment{
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+/* Destaque suave quando uma avaliação obrigatória está faltando */
+.overall-rating.required-invalid,
+.rating-row.required-invalid{
+  border-color:rgba(255,110,168,.62) !important;
+  box-shadow:0 0 0 3px rgba(255,93,203,.07),inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+
+/* Reduz custo visual sem perder o acabamento */
+.form-card,
+.field-card,
+.rating-row,
+.overall-rating,
+.return-card{
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+.field-card:hover{
+  transform:translateY(-1px);
+}
+
+.submit{
+  will-change:auto;
+}
+
+@media(max-width:650px){
+  body::before{opacity:.42}
+  .form-card,
+  .field-card,
+  .rating-row,
+  .overall-rating,
+  .return-card{
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+  }
+  .overall-scale{height:80px}
+  .rating-scale{height:64px}
+  .overall-star,.grow-star{
+    filter:none;
+  }
+  .overall-segment.active .overall-star,
+  .scale-segment.active .grow-star{
+    filter:drop-shadow(0 0 4px rgba(255,93,203,.22)) !important;
+  }
+}
+
+/* Movimento mais macio e curto */
+.input,.textarea,.phone-control,.field-card,.rating-row,.overall-rating,
+.return-option label,.feedback-chip label,.submit{
+  transition-duration:.14s !important;
+  transition-timing-function:cubic-bezier(.2,.7,.3,1) !important;
+}
+
+
+/* V25 — ESTRELAS SELECIONADAS DOURADAS/AMARELAS */
+.overall-segment.active .overall-star,
+.scale-segment.active .grow-star{
+  color:#ffd84d !important;
+  opacity:1 !important;
+  filter:drop-shadow(0 0 7px rgba(255,216,77,.40)) !important;
+  text-shadow:0 0 10px rgba(255,216,77,.22) !important;
+}
+.overall-segment.preview .overall-star,
+.scale-segment.preview .grow-star{
+  color:#f2c94c !important;
+  opacity:1 !important;
+}
+.overall-rating[data-score="5"] .overall-segment.active .overall-star,
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  color:#ffe56a !important;
+  filter:drop-shadow(0 0 9px rgba(255,229,106,.50)) !important;
+  text-shadow:0 0 12px rgba(255,229,106,.28) !important;
+}
+@media(max-width:650px){
+  .overall-segment.active .overall-star,
+  .scale-segment.active .grow-star{
+    color:#ffd84d !important;
+    filter:drop-shadow(0 0 5px rgba(255,216,77,.32)) !important;
+  }
+}
+
+
+/* V26 — FIX DEFINITIVO DAS ESTRELAS DAS CATEGORIAS */
+.rating-scale .scale-segment{cursor:pointer;}
+.rating-row.has-value .scale-segment.active .grow-star{
+  color:#ffd84d !important;
+  opacity:1 !important;
+  filter:drop-shadow(0 0 7px rgba(255,216,77,.46)) !important;
+  text-shadow:0 0 10px rgba(255,216,77,.26) !important;
+  transform:translateY(-1px) scale(1.03) !important;
+}
+.rating-row.has-value .scale-segment:not(.active) .grow-star{
+  color:#6f6178 !important;
+  opacity:.72 !important;
+  filter:none !important;
+  text-shadow:none !important;
+}
+.rating-row.has-value .rating-result{
+  color:#ffd6f1 !important;
+}
+@media(max-width:650px){
+  .rating-row.has-value .scale-segment.active .grow-star{
+    filter:drop-shadow(0 0 4px rgba(255,216,77,.34)) !important;
+  }
+}
+
+
+/* V27 — FIX REAL DAS ESTRELAS */
+.rating-scale .scale-segment,
+.overall-scale .overall-segment{
+  position:relative;
+  z-index:2;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+}
+.rating-scale .grow-star,
+.overall-scale .overall-star{
+  pointer-events:none !important;
+}
+
+/* estado desligado */
+.rating-scale .grow-star,
+.overall-scale .overall-star{
+  color:#75687f !important;
+  opacity:.78 !important;
+  text-shadow:none !important;
+  filter:none !important;
+}
+
+/* estado ligado */
+.rating-scale .scale-segment.active .grow-star,
+.overall-scale .overall-segment.active .overall-star{
+  color:#FFD84D !important;
+  opacity:1 !important;
+  text-shadow:0 0 10px rgba(255,216,77,.34) !important;
+  filter:drop-shadow(0 0 6px rgba(255,216,77,.46)) !important;
+}
+
+/* deixa a resposta visual imediata no toque */
+.rating-scale .scale-segment:active .grow-star,
+.overall-scale .overall-segment:active .overall-star{
+  transform:scale(1.08) !important;
+}
+
+@media(max-width:650px){
+  .rating-scale .scale-segment.active .grow-star,
+  .overall-scale .overall-segment.active .overall-star{
+    color:#FFD84D !important;
+    text-shadow:0 0 7px rgba(255,216,77,.28) !important;
+    filter:drop-shadow(0 0 4px rgba(255,216,77,.40)) !important;
+  }
+}
+
+
+/* V28 — categorias com o mesmo feedback visual da nota geral */
+.rating-row.has-value{
+  border-color:rgba(255,216,77,.28) !important;
+  background:
+    radial-gradient(circle at 50% 110%,rgba(255,216,77,.055),transparent 48%),
+    linear-gradient(180deg,rgba(40,25,43,.80),rgba(24,16,29,.64)) !important;
+}
+.rating-row.has-value .rating-result{
+  color:#FFD6F1 !important;
+  font-weight:900;
+}
+.rating-row.has-value .scale-segment.active .grow-star{
+  color:#FFD84D !important;
+  opacity:1 !important;
+  filter:drop-shadow(0 0 7px rgba(255,216,77,.48)) !important;
+  text-shadow:0 0 11px rgba(255,216,77,.30) !important;
+}
+.rating-row.has-value .scale-segment:not(.active) .grow-star{
+  color:#75687f !important;
+  opacity:.72 !important;
+  filter:none !important;
+  text-shadow:none !important;
+}
+
+
+/* V29 — RESET TOTAL */
+form:not(.hide) .overall-rating:not(.has-value) .overall-star,
+form:not(.hide) .rating-row:not(.has-value) .grow-star{
+  color:#75687f !important;
+  opacity:.78 !important;
+  filter:none !important;
+  text-shadow:none !important;
+}
+
+
+/* =========================================================
+   V32 — ESTRELAS PREMIUM / REFINO VISUAL
+   Mantém toda a lógica, campos e integração da V30.
+   ========================================================= */
+
+:root{
+  --v32-gold-1:#fff7c7;
+  --v32-gold-2:#f7d777;
+  --v32-gold-3:#c78a25;
+  --v32-star-off-1:#73677d;
+  --v32-star-off-2:#4d4358;
+}
+
+/* O controle vira uma peça mais limpa e sofisticada */
+.overall-scale,
+.rating-scale{
+  overflow:visible !important;
+  align-items:center !important;
+  background:
+    radial-gradient(circle at 50% 115%,rgba(255,216,119,.055),transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.026),rgba(255,255,255,.009)) !important;
+  border:1px solid rgba(255,255,255,.085) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 12px 26px rgba(0,0,0,.12) !important;
+}
+
+.overall-scale{
+  min-height:84px !important;
+  height:auto !important;
+  padding:12px 9px !important;
+  border-radius:20px !important;
+}
+
+.rating-scale{
+  min-height:64px !important;
+  height:auto !important;
+  padding:9px 7px !important;
+  border-radius:16px !important;
+}
+
+/* remove as divisões pesadas entre cada nota */
+.overall-segment:not(:last-child)::after,
+.scale-segment:not(:last-child)::after{
+  display:none !important;
+}
+
+.overall-segment,
+.scale-segment{
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+  border-radius:14px;
+  transition:
+    transform .18s cubic-bezier(.2,.8,.2,1),
+    background .18s ease,
+    box-shadow .18s ease !important;
+}
+
+.overall-segment{
+  min-height:58px;
+}
+
+.scale-segment{
+  min-height:46px;
+}
+
+/* estrela desenhada em CSS: mesma forma em todas as notas, sem aspecto "genérico" */
+.overall-star,
+.grow-star{
+  display:block !important;
+  width:34px !important;
+  height:34px !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  opacity:1 !important;
+  background:linear-gradient(145deg,var(--v32-star-off-1),var(--v32-star-off-2)) !important;
+  clip-path:polygon(
+    50% 2%,
+    61% 35%,
+    96% 35%,
+    68% 55%,
+    79% 90%,
+    50% 69%,
+    21% 90%,
+    32% 55%,
+    4% 35%,
+    39% 35%
+  );
+  transform:translateZ(0) scale(.94) !important;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.28)) !important;
+  text-shadow:none !important;
+  transition:
+    transform .18s cubic-bezier(.2,.8,.2,1),
+    filter .18s ease,
+    background .18s ease,
+    opacity .18s ease !important;
+}
+
+.grow-star{
+  width:27px !important;
+  height:27px !important;
+}
+
+/* todas do mesmo tamanho: mais luxuoso e muito mais legível */
+.overall-segment:nth-child(n) .overall-star,
+.scale-segment:nth-child(n) .grow-star{
+  font-size:0 !important;
+}
+
+/* estado selecionado */
+.overall-segment.active .overall-star,
+.scale-segment.active .grow-star{
+  background:
+    linear-gradient(145deg,
+      var(--v32-gold-1) 0%,
+      var(--v32-gold-2) 46%,
+      var(--v32-gold-3) 100%) !important;
+  transform:translateY(-1px) scale(1) !important;
+  filter:
+    drop-shadow(0 0 6px rgba(247,215,119,.30))
+    drop-shadow(0 3px 3px rgba(0,0,0,.22)) !important;
+}
+
+/* preview/hover sem transformar a página em "jogo" */
+@media (hover:hover) and (pointer:fine){
+  .overall-segment:hover,
+  .scale-segment:hover{
+    background:rgba(255,255,255,.026);
+    transform:translateY(-2px);
+  }
+
+  .overall-segment:hover .overall-star,
+  .scale-segment:hover .grow-star,
+  .overall-segment.preview .overall-star,
+  .scale-segment.preview .grow-star{
+    background:linear-gradient(145deg,#f8e7a8,#caa55e) !important;
+    transform:translateY(-1px) scale(1.035) !important;
+    filter:drop-shadow(0 0 6px rgba(235,203,123,.22)) !important;
+  }
+}
+
+/* toque curto e nítido no mobile */
+.overall-segment:active .overall-star,
+.scale-segment:active .grow-star{
+  transform:scale(.90) !important;
+}
+
+/* cards avaliados ficam refinados, sem borda amarela forte */
+.overall-rating.has-value,
+.rating-row.has-value{
+  border-color:rgba(245,214,128,.18) !important;
+}
+
+.rating-row.has-value{
+  background:
+    radial-gradient(circle at 50% 115%,rgba(239,206,118,.035),transparent 48%),
+    linear-gradient(180deg,rgba(39,27,43,.76),rgba(23,16,28,.62)) !important;
+}
+
+.overall-rating.has-value .overall-result,
+.rating-row.has-value .rating-result{
+  color:#f7e4ad !important;
+}
+
+/* 5/5: celebração curta e elegante */
+.overall-rating.five-star,
+.rating-row.five-star{
+  overflow:hidden;
+  border-color:rgba(247,215,119,.28) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 0 0 1px rgba(247,215,119,.045),
+    0 16px 44px rgba(0,0,0,.13) !important;
+}
+
+/* brilho fino atravessa uma única vez visualmente, sem exagero */
+.overall-rating.five-star .overall-scale::after,
+.rating-row.five-star .rating-scale::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 auto 0 -34% !important;
+  width:22% !important;
+  pointer-events:none !important;
+  background:linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,248,211,.02) 25%,
+    rgba(255,248,211,.18) 50%,
+    rgba(255,248,211,.02) 75%,
+    transparent
+  ) !important;
+  transform:skewX(-12deg) !important;
+  animation:v32Sheen 2.8s ease-in-out infinite !important;
+}
+
+/* dois pequenos pontos de luz apenas no 5 */
+.overall-rating.five-star::before,
+.overall-rating.five-star::after,
+.rating-row.five-star::before,
+.rating-row.five-star::after{
+  color:#f7dd8d !important;
+  opacity:0 !important;
+  text-shadow:0 0 8px rgba(247,221,141,.25) !important;
+  animation:v32Spark 2.8s ease-in-out infinite !important;
+}
+
+.overall-rating.five-star::before,
+.rating-row.five-star::before{
+  font-size:10px !important;
+  top:15px !important;
+  right:18px !important;
+}
+
+.overall-rating.five-star::after,
+.rating-row.five-star::after{
+  font-size:7px !important;
+  top:31px !important;
+  right:40px !important;
+  animation-delay:.45s !important;
+}
+
+/* o clique no 5 ganha um pequeno "assentamento", não um giro */
+.overall-rating[data-score="5"] .overall-segment.active .overall-star,
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  animation:v32StarBreathe 2.7s ease-in-out infinite !important;
+}
+
+@keyframes v32Sheen{
+  0%,58%{left:-34%;opacity:0}
+  66%{opacity:.9}
+  84%{left:112%;opacity:.55}
+  100%{left:112%;opacity:0}
+}
+
+@keyframes v32Spark{
+  0%,62%,100%{opacity:0;transform:translateY(3px) scale(.75)}
+  72%{opacity:.85;transform:translateY(0) scale(1)}
+  84%{opacity:0;transform:translateY(-8px) scale(.9)}
+}
+
+@keyframes v32StarBreathe{
+  0%,100%{transform:translateY(-1px) scale(1)}
+  50%{transform:translateY(-2px) scale(1.035)}
+}
+
+/* Mobile: nada passa da largura da tela e os alvos continuam confortáveis */
+@media(max-width:650px){
+  .overall-scale{
+    min-height:76px !important;
+    padding:10px 5px !important;
+    border-radius:17px !important;
+  }
+
+  .rating-scale{
+    min-height:60px !important;
+    padding:7px 4px !important;
+  }
+
+  .overall-segment{
+    min-width:0 !important;
+    min-height:54px !important;
+  }
+
+  .scale-segment{
+    min-width:0 !important;
+    min-height:44px !important;
+  }
+
+  .overall-star{
+    width:30px !important;
+    height:30px !important;
+  }
+
+  .grow-star{
+    width:24px !important;
+    height:24px !important;
+  }
+
+  .overall-rating.five-star .overall-scale::after,
+  .rating-row.five-star .rating-scale::after{
+    animation-duration:3.1s !important;
+  }
+}
+
+/* Respeita acessibilidade/redução de movimento */
+@media(prefers-reduced-motion:reduce){
+  .overall-rating[data-score="5"] .overall-segment.active .overall-star,
+  .rating-row[data-score="5"] .scale-segment.active .grow-star,
+  .overall-rating.five-star::before,
+  .overall-rating.five-star::after,
+  .rating-row.five-star::before,
+  .rating-row.five-star::after,
+  .overall-rating.five-star .overall-scale::after,
+  .rating-row.five-star .rating-scale::after{
+    animation:none !important;
+  }
+}
+
+
+
+/* =========================================================
+   V33 — LUXURY OPEN
+   Menos "card em cima de card", mais hotel/cassino premium.
+   Mantém toda a lógica, campos, validações e integração da V32.
+   ========================================================= */
+
+:root{
+  --v33-line:rgba(255,255,255,.075);
+  --v33-soft:rgba(255,255,255,.026);
+  --v33-soft-2:rgba(255,255,255,.012);
+  --v33-pink:#ff77d2;
+  --v33-violet:#a76cff;
+  --v33-gold:#f3d98e;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% -8%,rgba(255,92,198,.16),transparent 32%),
+    radial-gradient(circle at 88% 18%,rgba(123,72,255,.12),transparent 29%),
+    radial-gradient(circle at 8% 34%,rgba(255,92,198,.055),transparent 30%),
+    linear-gradient(180deg,#120918 0%,#0c0710 44%,#08060b 100%) !important;
+}
+
+body::before{
+  opacity:.34 !important;
+}
+
+.shell{
+  width:min(100%,780px) !important;
+  padding:42px 18px 56px !important;
+}
+
+.hero{
+  padding:4px 12px 36px !important;
+}
+
+.logo{
+  width:min(156px,38vw) !important;
+  margin-bottom:24px !important;
+}
+
+.kicker{
+  font-size:10px !important;
+  letter-spacing:.22em !important;
+  color:#eebfe3 !important;
+  text-shadow:none !important;
+}
+
+h1{
+  max-width:620px !important;
+  font-size:clamp(38px,6vw,58px) !important;
+  line-height:1 !important;
+}
+
+.hero p{
+  max-width:520px !important;
+  margin-top:18px !important;
+  color:#c6b9ce !important;
+  font-size:14px !important;
+}
+
+/* A grande mudança: o formulário deixa de parecer um painel */
+.form-card{
+  overflow:visible !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+
+.accent-line{
+  width:92px !important;
+  height:2px !important;
+  margin:0 auto 34px !important;
+  border-radius:999px !important;
+  background:linear-gradient(90deg,transparent,var(--v33-pink),var(--v33-violet),transparent) !important;
+  opacity:.82;
+}
+
+.form-body{
+  padding:0 !important;
+}
+
+/* Seções abertas, separadas por espaço e linha delicada */
+.section{
+  position:relative;
+  padding:0 0 44px !important;
+  margin:0 0 44px !important;
+  border:0 !important;
+}
+
+.section + .section{
+  padding-top:0 !important;
+  border-top:0 !important;
+}
+
+.section:not(:last-of-type)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--v33-line) 12%,var(--v33-line) 88%,transparent);
+}
+
+.section-head{
+  margin-bottom:24px !important;
+  align-items:center !important;
+}
+
+.section-title{
+  font-size:clamp(24px,3vw,30px) !important;
+  letter-spacing:-.025em;
+}
+
+.section-desc{
+  margin-top:8px !important;
+  max-width:570px;
+  color:#a99cae !important;
+}
+
+.step{
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  padding:7px 10px !important;
+  border:1px solid rgba(255,255,255,.07) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.025) !important;
+  color:#caa8c5 !important;
+  font:800 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace !important;
+  letter-spacing:.12em;
+}
+
+/* Dados: sem caixa externa; só o campo em si recebe acabamento */
+.profile-intro{
+  padding:0 !important;
+  margin:0 0 24px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#a99cae !important;
+}
+
+.profile-grid{
+  gap:22px !important;
+}
+
+.field-card{
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+
+.field-card:hover,
+.field-card:focus-within{
+  transform:none !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+
+.field-top{
+  margin-bottom:7px !important;
+}
+
+.field-icon{
+  min-width:auto !important;
+  height:auto !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#8e7d94 !important;
+  font-size:9px !important;
+  letter-spacing:.14em !important;
+}
+
+.field-helper{
+  margin-bottom:10px !important;
+  color:#8f8392 !important;
+  font-size:11px !important;
+}
+
+.section-profile .input,
+.section-profile .phone-control,
+.input,
+.textarea{
+  border:1px solid rgba(255,255,255,.085) !important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.024),rgba(255,255,255,.008)),
+    rgba(12,8,15,.66) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 12px 34px rgba(0,0,0,.08) !important;
+}
+
+.section-profile .input,
+.input{
+  border-radius:16px !important;
+}
+
+.section-profile .phone-control,
+.phone-control{
+  border-radius:16px !important;
+}
+
+.section-profile .phone-country-btn,
+.phone-country-btn{
+  border-radius:15px 0 0 15px !important;
+}
+
+.textarea{
+  border-radius:18px !important;
+}
+
+/* Nota geral: grande foco, quase flutuante */
+.review-intro{
+  margin:0 0 20px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#9f93a3 !important;
+}
+
+.overall-rating{
+  padding:28px 0 6px !important;
+  margin-bottom:28px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  overflow:visible !important;
+}
+
+.overall-rating.has-value,
+.overall-rating.five-star{
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.overall-top{
+  margin-bottom:22px !important;
+}
+
+.overall-title{
+  font-size:27px !important;
+}
+
+.overall-copy{
+  margin-top:7px !important;
+  color:#8f8392 !important;
+}
+
+.overall-result{
+  margin-top:14px !important;
+  font-size:12px !important;
+}
+
+.overall-scale{
+  width:min(100%,560px) !important;
+  margin:0 auto !important;
+  min-height:92px !important;
+  padding:14px 16px !important;
+  border:0 !important;
+  border-radius:24px !important;
+  background:
+    radial-gradient(circle at 50% 120%,rgba(243,217,142,.07),transparent 48%),
+    linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,.009)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 24px 55px rgba(0,0,0,.18) !important;
+}
+
+.overall-hints{
+  width:min(100%,520px);
+  margin:10px auto 0 !important;
+}
+
+/* Categorias: uma área contínua, sem "caixinha por pergunta" */
+.detail-label{
+  margin:34px 0 16px !important;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+
+.ratings{
+  display:block !important;
+}
+
+.rating-row{
+  padding:18px 0 19px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  overflow:visible !important;
+}
+
+.rating-row + .rating-row{
+  border-top:1px solid rgba(255,255,255,.055) !important;
+}
+
+.rating-row.has-value,
+.rating-row.five-star{
+  border-left:0 !important;
+  border-right:0 !important;
+  border-bottom:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+.rating-row-top{
+  margin-bottom:11px !important;
+}
+
+.rating-name{
+  font-size:14px !important;
+  letter-spacing:0 !important;
+}
+
+.rating-result{
+  font-size:10px !important;
+}
+
+.rating-scale{
+  width:100% !important;
+  min-height:58px !important;
+  padding:7px 10px !important;
+  border:0 !important;
+  border-radius:16px !important;
+  background:rgba(255,255,255,.018) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.035) !important;
+}
+
+.rating-hints{
+  margin:5px 3px 0 !important;
+}
+
+/* comentário também aberto */
+.comment-prompt{
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#9f93a3 !important;
+}
+
+/* Intenção de retorno: leve, horizontal, sem card pesado */
+.return-card{
+  margin:4px 0 34px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+
+.return-title{
+  font-size:24px !important;
+}
+
+.return-copy{
+  margin:8px 0 16px !important;
+  color:#95899a !important;
+}
+
+.return-options{
+  gap:10px !important;
+}
+
+.return-option label{
+  min-height:50px !important;
+  border:1px solid rgba(255,255,255,.07) !important;
+  border-radius:14px !important;
+  background:rgba(255,255,255,.02) !important;
+}
+
+.return-option input:checked + label{
+  border-color:rgba(255,119,210,.34) !important;
+  background:
+    linear-gradient(180deg,rgba(255,119,210,.11),rgba(167,108,255,.055)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 10px 26px rgba(105,52,132,.10) !important;
+}
+
+/* CTA mais limpo e refinado */
+.submit{
+  min-height:60px !important;
+  border-radius:16px !important;
+  box-shadow:
+    0 16px 42px rgba(157,62,204,.24),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+
+.note{
+  margin-top:14px !important;
+  color:#756a79 !important;
+}
+
+.footer{
+  margin-top:34px !important;
+  color:#706574 !important;
+}
+
+/* Celebração 5/5: só onde importa */
+.rating-row.five-star::before,
+.rating-row.five-star::after{
+  display:none !important;
+}
+
+.rating-row.five-star .rating-scale::after{
+  display:none !important;
+}
+
+.overall-rating.five-star::before,
+.overall-rating.five-star::after{
+  display:block !important;
+}
+
+.overall-rating.five-star .overall-scale::after{
+  display:block !important;
+}
+
+/* Mobile — sem lateral, sem cards apertados */
+@media(max-width:650px){
+  html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+
+  .shell{
+    width:100% !important;
+    padding:24px 14px 36px !important;
+  }
+
+  .hero{
+    padding:8px 8px 28px !important;
+  }
+
+  .logo{
+    width:min(145px,42vw) !important;
+  }
+
+  h1{
+    font-size:clamp(35px,10.6vw,46px) !important;
+  }
+
+  .accent-line{
+    margin-bottom:28px !important;
+  }
+
+  .section{
+    padding-bottom:34px !important;
+    margin-bottom:34px !important;
+  }
+
+  .section-head{
+    gap:12px !important;
+    margin-bottom:20px !important;
+  }
+
+  .section-title{
+    font-size:24px !important;
+  }
+
+  .profile-grid{
+    gap:19px !important;
+  }
+
+  .overall-rating{
+    padding-top:20px !important;
+  }
+
+  .overall-title{
+    font-size:24px !important;
+  }
+
+  .overall-scale{
+    min-height:78px !important;
+    padding:10px 5px !important;
+    border-radius:19px !important;
+  }
+
+  .overall-star{
+    width:29px !important;
+    height:29px !important;
+  }
+
+  .rating-row{
+    padding:16px 0 17px !important;
+  }
+
+  .rating-scale{
+    min-height:56px !important;
+    padding:6px 4px !important;
+  }
+
+  .grow-star{
+    width:23px !important;
+    height:23px !important;
+  }
+
+  .return-options{
+    grid-template-columns:1fr 1fr 1fr !important;
+    gap:7px !important;
+  }
+
+  .return-option label{
+    min-height:48px !important;
+    padding:7px 4px !important;
+    font-size:11px !important;
+  }
+
+  .phone-country-menu{
+    left:12px !important;
+    right:12px !important;
+  }
+}
+
+
+
+/* =========================================================
+   V34 — LUXURY STARS
+   Categorias menos "formulário" + 5/5 com efeito premium.
+   Mantém toda a lógica e backend da V33.
+   ========================================================= */
+
+/* Cabeçalho da área de categorias mais editorial */
+.detail-label{
+  margin:34px 0 8px !important;
+  padding:0 0 14px !important;
+  border-bottom:1px solid rgba(255,255,255,.045) !important;
+}
+
+.detail-label strong{
+  font-size:13px !important;
+  letter-spacing:.015em !important;
+  color:#eee5f1 !important;
+}
+
+.detail-label span{
+  color:#74697a !important;
+  font-size:9px !important;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* Cada avaliação vira uma faixa aberta, não um "campo" */
+.rating-row{
+  position:relative !important;
+  padding:23px 0 25px !important;
+  overflow:visible !important;
+}
+
+.rating-row + .rating-row{
+  border-top:1px solid rgba(255,255,255,.042) !important;
+}
+
+.rating-row-top{
+  margin-bottom:16px !important;
+  align-items:center !important;
+}
+
+.rating-name{
+  color:#f6eff8 !important;
+  font-size:15px !important;
+  font-weight:850 !important;
+}
+
+.rating-result{
+  min-width:auto !important;
+  color:#766b7a !important;
+  font-size:10px !important;
+  font-weight:800 !important;
+  letter-spacing:.01em;
+}
+
+/* O controle deixa de ser uma caixa */
+.rating-scale{
+  position:relative !important;
+  width:100% !important;
+  min-height:44px !important;
+  height:44px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;
+  align-items:center !important;
+}
+
+/* Linha sutil por baixo, só para dar ritmo */
+.rating-scale::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  left:8% !important;
+  right:8% !important;
+  top:50% !important;
+  height:1px !important;
+  transform:translateY(-50%) !important;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.045) 10%,
+    rgba(255,255,255,.045) 90%,
+    transparent
+  ) !important;
+  pointer-events:none;
+}
+
+.scale-segment{
+  position:relative !important;
+  z-index:2 !important;
+  min-height:44px !important;
+  height:44px !important;
+  padding:0 !important;
+  border-radius:50% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background:transparent !important;
+}
+
+.scale-segment::after{
+  display:none !important;
+}
+
+/* Estrela maior, leve, sem bolinha/campo em volta */
+.grow-star{
+  width:30px !important;
+  height:30px !important;
+  background:linear-gradient(145deg,#75697e,#4c4354) !important;
+  opacity:.72 !important;
+  transform:translateZ(0) scale(.92) !important;
+  filter:
+    drop-shadow(0 2px 3px rgba(0,0,0,.30)) !important;
+  transition:
+    transform .18s cubic-bezier(.2,.8,.2,1),
+    filter .18s ease,
+    background .18s ease,
+    opacity .18s ease !important;
+}
+
+/* preenchidas: mais claras e luxuosas */
+.scale-segment.active .grow-star{
+  opacity:1 !important;
+  background:linear-gradient(
+    145deg,
+    #fff6c7 0%,
+    #f4d26f 42%,
+    #c89430 100%
+  ) !important;
+  transform:translateY(-1px) scale(1.04) !important;
+  filter:
+    drop-shadow(0 0 7px rgba(247,215,119,.30))
+    drop-shadow(0 3px 3px rgba(0,0,0,.23)) !important;
+}
+
+/* hover de desktop: elegante */
+@media(hover:hover) and (pointer:fine){
+  .scale-segment:hover{
+    background:transparent !important;
+    transform:none !important;
+  }
+
+  .scale-segment:hover .grow-star,
+  .scale-segment.preview .grow-star{
+    opacity:1 !important;
+    background:linear-gradient(145deg,#f7e7a8,#d1aa58) !important;
+    transform:translateY(-3px) scale(1.09) !important;
+    filter:
+      drop-shadow(0 0 8px rgba(239,209,130,.28))
+      drop-shadow(0 4px 4px rgba(0,0,0,.20)) !important;
+  }
+}
+
+.scale-segment:active .grow-star{
+  transform:scale(.88) !important;
+}
+
+/* números 1 e 5 quase somem: menos cara de formulário */
+.rating-hints{
+  margin:8px 4px 0 !important;
+  color:#655b68 !important;
+  font-size:9px !important;
+  opacity:.8;
+}
+
+/* Quando selecionado, só o texto e estrelas mudam */
+.rating-row.has-value{
+  background:transparent !important;
+  border-left:0 !important;
+  border-right:0 !important;
+  box-shadow:none !important;
+}
+
+.rating-row.has-value .rating-result{
+  color:#dbc992 !important;
+}
+
+/* =========================================================
+   5/5 — efeito premium visível, curto e sem exagero
+   ========================================================= */
+
+/* glow na faixa toda */
+.rating-row.five-star{
+  isolation:isolate;
+}
+
+.rating-row.five-star::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  left:-18px !important;
+  right:-18px !important;
+  top:10px !important;
+  bottom:10px !important;
+  border-radius:22px !important;
+  opacity:.65 !important;
+  background:
+    radial-gradient(circle at 50% 60%,rgba(244,210,111,.08),transparent 52%),
+    radial-gradient(circle at 82% 38%,rgba(255,119,210,.05),transparent 24%) !important;
+  animation:v34Glow 2.7s ease-in-out infinite !important;
+  pointer-events:none;
+}
+
+/* pequenos sparkles no lado direito */
+.rating-row.five-star::after{
+  content:"✦  ·  ✦" !important;
+  display:block !important;
+  position:absolute !important;
+  z-index:4 !important;
+  right:3px !important;
+  top:46px !important;
+  color:#f5dc8c !important;
+  font-size:9px !important;
+  letter-spacing:7px !important;
+  opacity:0 !important;
+  text-shadow:0 0 8px rgba(245,220,140,.35) !important;
+  animation:v34Sparkle 2.5s ease-in-out infinite !important;
+  pointer-events:none;
+}
+
+/* feixe atravessando as estrelas */
+.rating-row.five-star .rating-scale::after{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  z-index:1 !important;
+  top:-6px !important;
+  bottom:-6px !important;
+  left:-25% !important;
+  width:18% !important;
+  background:linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,248,211,.04) 25%,
+    rgba(255,248,211,.32) 50%,
+    rgba(255,248,211,.04) 75%,
+    transparent
+  ) !important;
+  transform:skewX(-13deg) !important;
+  filter:blur(.2px);
+  animation:v34Sweep 2.8s ease-in-out infinite !important;
+  pointer-events:none;
+}
+
+/* 5 estrelas respiram juntas, mas com pequeno delay sequencial */
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  animation:v34StarPulse 2.35s ease-in-out infinite !important;
+}
+
+.rating-row[data-score="5"] .scale-segment:nth-child(2) .grow-star{animation-delay:.06s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(3) .grow-star{animation-delay:.12s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(4) .grow-star{animation-delay:.18s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(5) .grow-star{animation-delay:.24s !important}
+
+.rating-row[data-score="5"] .rating-result{
+  color:#f2d98d !important;
+  text-shadow:0 0 10px rgba(242,217,141,.16);
+}
+
+@keyframes v34Glow{
+  0%,100%{opacity:.40;transform:scale(.995)}
+  50%{opacity:.78;transform:scale(1)}
+}
+
+@keyframes v34Sweep{
+  0%,54%{left:-25%;opacity:0}
+  62%{opacity:1}
+  83%{left:108%;opacity:.72}
+  100%{left:108%;opacity:0}
+}
+
+@keyframes v34Sparkle{
+  0%,56%,100%{opacity:0;transform:translateY(5px) scale(.75)}
+  68%{opacity:.9;transform:translateY(0) scale(1)}
+  84%{opacity:0;transform:translateY(-10px) scale(.92)}
+}
+
+@keyframes v34StarPulse{
+  0%,100%{
+    transform:translateY(-1px) scale(1.04);
+    filter:
+      drop-shadow(0 0 7px rgba(247,215,119,.28))
+      drop-shadow(0 3px 3px rgba(0,0,0,.23));
+  }
+  50%{
+    transform:translateY(-4px) scale(1.11);
+    filter:
+      drop-shadow(0 0 12px rgba(255,224,126,.46))
+      drop-shadow(0 4px 4px rgba(0,0,0,.20));
+  }
+}
+
+/* A nota geral continua sendo a estrela do show */
+.overall-scale{
+  border:0 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.028),
+    0 22px 48px rgba(0,0,0,.13) !important;
+}
+
+.overall-rating.five-star{
+  position:relative;
+}
+
+.overall-rating.five-star::before{
+  content:"✦" !important;
+  display:block !important;
+  position:absolute !important;
+  top:18px !important;
+  right:10% !important;
+  color:#f6dc87 !important;
+  opacity:0 !important;
+  font-size:12px !important;
+  animation:v34Sparkle 2.45s ease-in-out infinite !important;
+}
+
+.overall-rating.five-star::after{
+  content:"✦" !important;
+  display:block !important;
+  position:absolute !important;
+  top:42px !important;
+  left:11% !important;
+  color:#eecbe8 !important;
+  opacity:0 !important;
+  font-size:8px !important;
+  animation:v34Sparkle 2.8s ease-in-out .28s infinite !important;
+}
+
+/* Mobile */
+@media(max-width:650px){
+  .rating-row{
+    padding:20px 0 22px !important;
+  }
+
+  .rating-row-top{
+    margin-bottom:14px !important;
+  }
+
+  .rating-name{
+    font-size:14px !important;
+  }
+
+  .rating-scale{
+    height:42px !important;
+    min-height:42px !important;
+  }
+
+  .scale-segment{
+    min-height:42px !important;
+    height:42px !important;
+  }
+
+  .grow-star{
+    width:27px !important;
+    height:27px !important;
+  }
+
+  .rating-row.five-star::before{
+    left:-8px !important;
+    right:-8px !important;
+  }
+
+  .rating-row.five-star::after{
+    right:0 !important;
+    top:42px !important;
+    font-size:8px !important;
+  }
+}
+
+/* Acessibilidade */
+@media(prefers-reduced-motion:reduce){
+  .rating-row.five-star::before,
+  .rating-row.five-star::after,
+  .rating-row.five-star .rating-scale::after,
+  .rating-row[data-score="5"] .scale-segment.active .grow-star,
+  .overall-rating.five-star::before,
+  .overall-rating.five-star::after{
+    animation:none !important;
+  }
+}
+
+
+
+/* =========================================================
+   V35 — STARS CRESCENTE
+   - estrelas em progressão
+   - categorias menos "reto/um embaixo do outro"
+   - efeito 5/5 mais evidente
+   Mantém backend, campos e JS da V34.
+   ========================================================= */
+
+/* Nota geral mais escultórica */
+.overall-scale{
+  min-height:116px !important;
+  padding:18px 18px 12px !important;
+  align-items:end !important;
+  background:
+    radial-gradient(circle at 50% 112%,rgba(244,212,118,.11),transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)) !important;
+}
+
+.overall-scale::before{
+  content:"" !important;
+  position:absolute !important;
+  left:10% !important;
+  right:10% !important;
+  bottom:28px !important;
+  height:1px !important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent) !important;
+  pointer-events:none;
+}
+
+.overall-segment{
+  align-items:flex-end !important;
+  min-height:78px !important;
+  background:transparent !important;
+}
+
+.overall-segment:nth-child(1){--osize:26px;--olift:9px}
+.overall-segment:nth-child(2){--osize:31px;--olift:5px}
+.overall-segment:nth-child(3){--osize:36px;--olift:1px}
+.overall-segment:nth-child(4){--osize:41px;--olift:-3px}
+.overall-segment:nth-child(5){--osize:46px;--olift:-7px}
+
+.overall-star{
+  width:var(--osize) !important;
+  height:var(--osize) !important;
+  transform:translateY(var(--olift)) scale(.94) !important;
+  opacity:.82 !important;
+}
+
+.overall-segment.active .overall-star{
+  transform:translateY(calc(var(--olift) - 2px)) scale(1.02) !important;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .overall-segment:hover .overall-star,
+  .overall-segment.preview .overall-star{
+    transform:translateY(calc(var(--olift) - 4px)) scale(1.04) !important;
+  }
+}
+
+.overall-rating[data-score="5"]{
+  position:relative !important;
+}
+
+.overall-rating[data-score="5"] .overall-scale{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 24px 58px rgba(0,0,0,.18),
+    0 0 0 1px rgba(244,212,118,.06) !important;
+}
+
+.overall-rating[data-score="5"] .overall-scale::after{
+  content:"" !important;
+  position:absolute !important;
+  left:-18% !important;
+  top:12px !important;
+  bottom:12px !important;
+  width:20% !important;
+  background:linear-gradient(100deg,transparent,rgba(255,248,211,.30),transparent) !important;
+  transform:skewX(-12deg) !important;
+  animation:v35Sweep 2.35s ease-in-out infinite !important;
+  pointer-events:none;
+}
+
+.overall-rating[data-score="5"]::before{
+  content:"✦" !important;
+  position:absolute !important;
+  right:8% !important;
+  top:12px !important;
+  color:#f7dd91 !important;
+  font-size:13px !important;
+  opacity:0 !important;
+  text-shadow:0 0 12px rgba(247,221,145,.40) !important;
+  animation:v35Sparkle 2.1s ease-in-out infinite !important;
+}
+
+.overall-rating[data-score="5"]::after{
+  content:"✦" !important;
+  position:absolute !important;
+  left:10% !important;
+  top:44px !important;
+  color:#efc4e8 !important;
+  font-size:8px !important;
+  opacity:0 !important;
+  animation:v35Sparkle 2.6s ease-in-out .25s infinite !important;
+}
+
+/* Categorias viram grid em desktop para não ficar reto/empilhado */
+.ratings{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:18px 22px !important;
+  align-items:start !important;
+}
+
+.rating-row{
+  position:relative !important;
+  min-height:174px !important;
+  padding:22px 18px 18px !important;
+  border:1px solid rgba(255,255,255,.06) !important;
+  border-radius:22px !important;
+  background:
+    radial-gradient(circle at 16% 14%,rgba(255,255,255,.03),transparent 28%),
+    linear-gradient(180deg,rgba(255,255,255,.024),rgba(255,255,255,.008)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.024),
+    0 18px 36px rgba(0,0,0,.10) !important;
+  overflow:visible !important;
+}
+
+.rating-row + .rating-row{
+  border-top:1px solid rgba(255,255,255,.06) !important;
+}
+
+.rating-row:nth-child(even){
+  transform:translateY(18px) !important;
+}
+
+.rating-row-top{
+  margin-bottom:14px !important;
+}
+
+.rating-name{
+  font-size:15px !important;
+}
+
+.rating-result{
+  color:#877a89 !important;
+}
+
+/* estrelas em progressão crescente */
+.rating-scale{
+  position:relative !important;
+  min-height:84px !important;
+  height:84px !important;
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;
+  align-items:end !important;
+  padding:0 2px 6px !important;
+  overflow:visible !important;
+}
+
+.rating-scale::before{
+  left:9% !important;
+  right:9% !important;
+  top:auto !important;
+  bottom:22px !important;
+  transform:none !important;
+  height:1px !important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent) !important;
+}
+
+.scale-segment{
+  height:74px !important;
+  min-height:74px !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  background:transparent !important;
+}
+
+.scale-segment:nth-child(1){--rsize:22px;--rlift:10px}
+.scale-segment:nth-child(2){--rsize:25px;--rlift:6px}
+.scale-segment:nth-child(3){--rsize:28px;--rlift:2px}
+.scale-segment:nth-child(4){--rsize:31px;--rlift:-2px}
+.scale-segment:nth-child(5){--rsize:34px;--rlift:-6px}
+
+.grow-star{
+  width:var(--rsize) !important;
+  height:var(--rsize) !important;
+  transform:translateY(var(--rlift)) scale(.92) !important;
+  opacity:.74 !important;
+}
+
+.scale-segment.active .grow-star{
+  transform:translateY(calc(var(--rlift) - 2px)) scale(1.05) !important;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .scale-segment:hover .grow-star,
+  .scale-segment.preview .grow-star{
+    transform:translateY(calc(var(--rlift) - 5px)) scale(1.10) !important;
+  }
+}
+
+.rating-hints{
+  margin-top:2px !important;
+  opacity:.55 !important;
+}
+
+.rating-row.has-value .rating-result{
+  color:#dccd9b !important;
+}
+
+/* 5/5 mais visível e confiável */
+.rating-row[data-score="5"]{
+  border-color:rgba(244,212,118,.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 20px 44px rgba(0,0,0,.14),
+    0 0 0 1px rgba(244,212,118,.05) !important;
+}
+
+.rating-row[data-score="5"]::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-1px !important;
+  border-radius:22px !important;
+  background:
+    radial-gradient(circle at 50% 70%,rgba(244,212,118,.11),transparent 46%),
+    radial-gradient(circle at 86% 22%,rgba(255,119,210,.08),transparent 20%) !important;
+  opacity:.95 !important;
+  pointer-events:none;
+  animation:v35Glow 2.3s ease-in-out infinite !important;
+}
+
+.rating-row[data-score="5"]::after{
+  content:"✦  ✦" !important;
+  position:absolute !important;
+  right:14px !important;
+  top:16px !important;
+  color:#f6dd93 !important;
+  font-size:10px !important;
+  letter-spacing:8px !important;
+  opacity:0 !important;
+  text-shadow:0 0 10px rgba(246,221,147,.34) !important;
+  pointer-events:none;
+  animation:v35Sparkle 2.15s ease-in-out infinite !important;
+}
+
+.rating-row[data-score="5"] .rating-scale::after{
+  content:"" !important;
+  position:absolute !important;
+  left:-16% !important;
+  top:8px !important;
+  bottom:10px !important;
+  width:16% !important;
+  background:linear-gradient(100deg,transparent,rgba(255,248,211,.34),transparent) !important;
+  transform:skewX(-12deg) !important;
+  pointer-events:none;
+  animation:v35Sweep 2.4s ease-in-out infinite !important;
+}
+
+.rating-row[data-score="5"] .scale-segment.active .grow-star{
+  animation:v35StarPulse 1.95s ease-in-out infinite !important;
+}
+
+.rating-row[data-score="5"] .scale-segment:nth-child(2) .grow-star{animation-delay:.05s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(3) .grow-star{animation-delay:.10s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(4) .grow-star{animation-delay:.15s !important}
+.rating-row[data-score="5"] .scale-segment:nth-child(5) .grow-star{animation-delay:.20s !important}
+
+.rating-row[data-score="5"] .rating-result{
+  color:#f2da95 !important;
+  text-shadow:0 0 12px rgba(242,218,149,.24) !important;
+}
+
+@keyframes v35Glow{
+  0%,100%{opacity:.50;transform:scale(.996)}
+  50%{opacity:.98;transform:scale(1)}
+}
+
+@keyframes v35Sweep{
+  0%,50%{left:-16%;opacity:0}
+  60%{opacity:1}
+  82%{left:108%;opacity:.75}
+  100%{left:108%;opacity:0}
+}
+
+@keyframes v35Sparkle{
+  0%,54%,100%{opacity:0;transform:translateY(6px) scale(.74)}
+  68%{opacity:.95;transform:translateY(0) scale(1)}
+  84%{opacity:0;transform:translateY(-9px) scale(.92)}
+}
+
+@keyframes v35StarPulse{
+  0%,100%{
+    transform:translateY(calc(var(--rlift) - 2px)) scale(1.05);
+    filter:
+      drop-shadow(0 0 7px rgba(247,215,119,.30))
+      drop-shadow(0 3px 3px rgba(0,0,0,.22));
+  }
+  50%{
+    transform:translateY(calc(var(--rlift) - 6px)) scale(1.13);
+    filter:
+      drop-shadow(0 0 13px rgba(255,227,135,.52))
+      drop-shadow(0 5px 5px rgba(0,0,0,.18));
+  }
+}
+
+/* Mobile: volta para uma coluna para não quebrar */
+@media(max-width:650px){
+  .ratings{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .rating-row{
+    min-height:158px !important;
+    padding:18px 14px 16px !important;
+    transform:none !important;
+  }
+
+  .rating-row:nth-child(even){
+    transform:none !important;
+  }
+
+  .rating-scale{
+    min-height:72px !important;
+    height:72px !important;
+    padding:0 0 4px !important;
+  }
+
+  .scale-segment{
+    height:64px !important;
+    min-height:64px !important;
+  }
+
+  .scale-segment:nth-child(1){--rsize:20px;--rlift:8px}
+  .scale-segment:nth-child(2){--rsize:23px;--rlift:5px}
+  .scale-segment:nth-child(3){--rsize:26px;--rlift:2px}
+  .scale-segment:nth-child(4){--rsize:29px;--rlift:-1px}
+  .scale-segment:nth-child(5){--rsize:32px;--rlift:-4px}
+
+  .overall-scale{
+    min-height:98px !important;
+    padding:14px 8px 10px !important;
+  }
+
+  .overall-segment:nth-child(1){--osize:23px;--olift:8px}
+  .overall-segment:nth-child(2){--osize:28px;--olift:5px}
+  .overall-segment:nth-child(3){--osize:33px;--olift:2px}
+  .overall-segment:nth-child(4){--osize:38px;--olift:-1px}
+  .overall-segment:nth-child(5){--osize:42px;--olift:-4px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .overall-rating[data-score="5"] .overall-scale::after,
+  .overall-rating[data-score="5"]::before,
+  .overall-rating[data-score="5"]::after,
+  .rating-row[data-score="5"]::before,
+  .rating-row[data-score="5"]::after,
+  .rating-row[data-score="5"] .rating-scale::after,
+  .rating-row[data-score="5"] .scale-segment.active .grow-star{
+    animation:none !important;
+  }
+}
+
+
+
+/* =========================================================
+   V36 — AJUSTE DE CENTRO
+   Centraliza o último card (Conforto) no desktop e garante
+   o centro óptico da quinta estrela sem alterar a progressão.
+   ========================================================= */
+@media (min-width:651px){
+  .ratings > .rating-row[data-key="conforto"]{
+    grid-column:1 / -1 !important;
+    width:calc((100% - 22px) / 2) !important;
+    justify-self:center !important;
+    transform:none !important;
+  }
+}
+
+/* quinta estrela sempre centralizada dentro do seu quinto */
+.rating-scale .scale-segment:nth-child(5),
+.overall-scale .overall-segment:nth-child(5){
+  display:flex !important;
+  justify-content:center !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+.rating-scale .scale-segment:nth-child(5) .grow-star,
+.overall-scale .overall-segment:nth-child(5) .overall-star{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  left:auto !important;
+  right:auto !important;
+}
+
+@media(max-width:650px){
+  .ratings > .rating-row[data-key="conforto"]{
+    grid-column:auto !important;
+    width:100% !important;
+    justify-self:stretch !important;
+  }
+}
+
+
+/* =========================================================
+   V37 — CAMADA PRODUTO PREMIUM / PRODUÇÃO
+   Acabamento operacional, progresso, rastreamento de QR e
+   confirmação com protocolo sem alterar a identidade V36.
+   ========================================================= */
+.completion-rail{
+  position:fixed;
+  z-index:10020;
+  top:0;left:0;right:0;
+  height:2px;
+  pointer-events:none;
+  background:rgba(255,255,255,.025);
+}
+.completion-rail > i{
+  display:block;
+  width:0%;height:100%;
+  background:linear-gradient(90deg,#ff72cb,#d04dff,#8b65ff);
+  box-shadow:0 0 16px rgba(255,93,203,.36);
+  transition:width .32s cubic-bezier(.2,.8,.2,1);
+}
+.premium-meta{
+  width:min(100%,560px);
+  margin:-15px auto 34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.premium-meta span{
+  min-height:28px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:0 10px;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:999px;
+  background:rgba(255,255,255,.018);
+  color:#9d8fa4;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  backdrop-filter:blur(10px);
+}
+.premium-meta span::before{
+  content:"";
+  width:4px;height:4px;
+  border-radius:50%;
+  background:#e878cd;
+  box-shadow:0 0 9px rgba(232,120,205,.52);
+}
+.success-reference{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:30px;
+  margin-top:17px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:999px;
+  background:rgba(255,255,255,.025);
+  color:#a994b1;
+  font:800 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+.offline-notice{
+  display:none;
+  margin:12px 0 0;
+  padding:10px 12px;
+  border:1px solid rgba(255,166,187,.20);
+  border-radius:12px;
+  background:rgba(255,110,150,.055);
+  color:#d9a9ba;
+  text-align:center;
+  font-size:10px;
+  line-height:1.4;
+}
+.offline-notice.show{display:block}
+.submit[data-ready="true"]{
+  box-shadow:0 18px 48px rgba(157,62,204,.30),0 0 34px rgba(255,84,190,.08),inset 0 1px 0 rgba(255,255,255,.20) !important;
+}
+@media(max-width:650px){
+  .premium-meta{margin:-8px auto 27px;gap:6px;padding:0 5px}
+  .premium-meta span{min-height:26px;padding:0 8px;font-size:8px;letter-spacing:.055em}
+}
+
+</style>
+</head>
+
+<body>
+<div class="completion-rail" aria-hidden="true"><i id="completion-fill"></i></div>
+<div class="language-switch" id="language-switch" aria-label="Escolher idioma">
+  <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+    <span class="language-current"><span id="language-current-flag"><svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="1.5" fill="#009B3A"/><polygon points="14,2.2 25,10 14,17.8 3,10" fill="#FFDF00"/><circle cx="14" cy="10" r="4.4" fill="#002776"/><path d="M10.1 9.2c2.8-1.2 5.4-.9 7.8.7" fill="none" stroke="#fff" stroke-width=".75"/></svg></span><span id="language-current-code">PT</span></span>
+    <span class="language-arrow">▼</span>
+  </button>
+  <div class="language-menu" id="language-menu" role="listbox">
+    <button class="language-option active" type="button" data-lang="pt"><svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="1.5" fill="#009B3A"/><polygon points="14,2.2 25,10 14,17.8 3,10" fill="#FFDF00"/><circle cx="14" cy="10" r="4.4" fill="#002776"/><path d="M10.1 9.2c2.8-1.2 5.4-.9 7.8.7" fill="none" stroke="#fff" stroke-width=".75"/></svg><span class="lang-name">Português</span><span class="lang-code">PT</span></button>
+    <button class="language-option" type="button" data-lang="es"><svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="6.67" rx="1.5" fill="#D52B1E"/><rect y="6.67" width="28" height="6.66" fill="#fff"/><rect y="13.33" width="28" height="6.67" rx="1.5" fill="#0038A8"/><circle cx="14" cy="10" r="2.15" fill="none" stroke="#2C8C3A" stroke-width=".45"/><circle cx="14" cy="10" r=".6" fill="#F5C400"/></svg><span class="lang-name">Español</span><span class="lang-code">ES</span></button>
+    <button class="language-option" type="button" data-lang="en"><svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect y="0" width="28" height="1.54"/><rect y="3.08" width="28" height="1.54"/><rect y="6.16" width="28" height="1.54"/><rect y="9.24" width="28" height="1.54"/><rect y="12.32" width="28" height="1.54"/><rect y="15.4" width="28" height="1.54"/><rect y="18.48" width="28" height="1.52"/></g><rect width="12.5" height="10.8" fill="#3C3B6E"/><g fill="#fff"><circle cx="2" cy="2" r=".45"/><circle cx="5" cy="2" r=".45"/><circle cx="8" cy="2" r=".45"/><circle cx="11" cy="2" r=".45"/><circle cx="3.5" cy="4" r=".45"/><circle cx="6.5" cy="4" r=".45"/><circle cx="9.5" cy="4" r=".45"/><circle cx="2" cy="6" r=".45"/><circle cx="5" cy="6" r=".45"/><circle cx="8" cy="6" r=".45"/><circle cx="11" cy="6" r=".45"/><circle cx="3.5" cy="8" r=".45"/><circle cx="6.5" cy="8" r=".45"/><circle cx="9.5" cy="8" r=".45"/></g></svg><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+    <button class="language-option" type="button" data-lang="gn"><svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="6.67" rx="1.5" fill="#D52B1E"/><rect y="6.67" width="28" height="6.66" fill="#fff"/><rect y="13.33" width="28" height="6.67" rx="1.5" fill="#0038A8"/><circle cx="14" cy="10" r="2.15" fill="none" stroke="#2C8C3A" stroke-width=".45"/><circle cx="14" cy="10" r=".6" fill="#F5C400"/></svg><span class="lang-name">Avañe'ẽ</span><span class="lang-code">GN</span></button>
+  </div>
+</div>
+
+<main class="shell">
+  <header class="hero">
+    <img class="logo" src="data:image/png;base64,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" alt="Amambay Hotel Casino">
+    <p class="kicker">Avaliação de experiência</p>
+    <h1>Como foi a sua experiência no Amambay?</h1>
+    <p>Sua opinião nos ajuda a tornar cada visita ainda melhor.</p>
+  </header>
+
+  <div class="premium-meta" aria-label="Informações da avaliação">
+    <span>Canal oficial Amambay</span>
+    <span>3 etapas</span>
+    <span>≈ 1 min</span>
+  </div>
+
+  <section class="form-card">
+    <div class="accent-line"></div>
+
+    <form id="evaluation-form" novalidate>
+      <div class="form-body">
+        <input type="hidden" name="form-name" value="avaliacao-hca">
+        <input id="origin" type="hidden" name="origem" value="bar">
+        <input id="language-hca" type="hidden" name="idioma" value="pt">
+        <input id="date-hca" type="hidden" name="data_hca">
+        <input id="time-hca" type="hidden" name="hora_hca">
+        <input id="timestamp-iso" type="hidden" name="timestamp_iso">
+        <input id="phone-normalized" type="hidden" name="telefone_normalizado">
+        <input id="phone-country" type="hidden" name="pais_telefone">
+        <input id="excel-atendimento" type="hidden" name="atendimento_estrelas">
+        <input id="excel-ambiente" type="hidden" name="ambiente_estrelas">
+        <input id="excel-musico" type="hidden" name="musico_banda_estrelas">
+        <input id="excel-bebidas" type="hidden" name="bebidas_estrelas">
+        <input id="excel-conforto" type="hidden" name="conforto_estrelas">
+        <input id="excel-media" type="hidden" name="media_avaliacao">
+        <input id="excel-geral" type="hidden" name="geral_estrelas">
+        <input id="excel-resumo" type="hidden" name="avaliacao_resumo">
+        <input id="response-id" type="hidden" name="response_id">
+        <input id="started-at" type="hidden" name="inicio_iso">
+        <input id="response-seconds" type="hidden" name="tempo_resposta_s">
+        <input id="device-type" type="hidden" name="dispositivo">
+        <input id="viewport-size" type="hidden" name="viewport">
+        <input id="qr-point" type="hidden" name="ponto_qr">
+        <input id="table-code" type="hidden" name="mesa">
+        <input id="campaign-code" type="hidden" name="campanha">
+
+        <p class="bot-field">
+          <label>Não preencha:<input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <section class="section section-profile">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Seus dados</h2>
+              <p class="section-desc">Deixe seus dados para identificarmos sua avaliação.</p>
+            </div>
+            <div class="step">01</div>
+          </div>
+
+          <div class="profile-grid">
+            <div class="field-card">
+              <div class="field-top">
+                <label class="label" for="name">Nome</label>
+                <span class="field-icon">AA</span>
+              </div>
+              <p class="field-helper">Como você gostaria de ser identificado na sua avaliação.</p>
+              <div class="input-shell">
+                <input class="input" id="name" name="nome" type="text" autocomplete="name" maxlength="80" placeholder="Seu nome (opcional)">
+              </div>
+              <div class="error" id="name-error"></div>
+            </div>
+
+            <div class="field-card">
+              <div class="field-top">
+                <label class="label" for="phone">WhatsApp</label>
+                <span class="field-icon">WA</span>
+              </div>
+              <p class="field-helper">Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.</p>
+              <div class="phone-field">
+                <div class="phone-control" id="phone-control">
+                  <div class="phone-country">
+                    <button class="phone-country-btn" id="phone-country-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+                      <img class="phone-country-flag" id="phone-country-flag" src="https://flagcdn.com/w40/py.png" alt="Paraguai" onerror="this.classList.add('failed');this.style.display='none'">
+                      <span class="phone-country-emoji" id="phone-country-emoji">🇵🇾</span>
+                      <span class="phone-country-dial" id="phone-country-dial">+595</span>
+                      <span class="phone-country-arrow">▼</span>
+                    </button>
+                    <div class="phone-country-menu" id="phone-country-menu">
+                      <input class="phone-country-search" id="phone-country-search" type="text" placeholder="Buscar país..." autocomplete="off">
+                      <div class="phone-country-list" id="phone-country-list" role="listbox"></div>
+                    </div>
+                  </div>
+
+                  <input class="phone-number-input" id="phone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="24" placeholder="981 123 456 (opcional)">
+                </div>
+
+                <div class="phone-meta">
+                  <span id="country-label">Paraguai · +595</span>
+                  <span class="phone-status" id="phone-status"></span>
+                </div>
+              </div>
+              <div class="error" id="phone-error"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Como foi sua experiência?</h2>
+              <p class="section-desc">Primeiro, dê uma nota geral. Depois, avalie os principais pontos.</p>
+            </div>
+            <div class="step">02</div>
+          </div>
+
+          <p class="review-intro">A nota geral é o principal indicador. As categorias abaixo ajudam a equipe a entender onde acertamos e onde devemos melhorar.</p>
+
+          <div class="overall-rating" id="overall-rating">
+            <div class="overall-top">
+              <h3 class="overall-title">Sua nota geral</h3>
+              <p class="overall-copy">Arraste ou toque, do menor para o maior.</p>
+              <div class="overall-result" id="overall-result" aria-live="polite">Ainda sem nota</div>
+            </div>
+
+            <input type="hidden" id="nota-geral" name="nota_geral" value="">
+            <div class="overall-scale" id="overall-scale" role="slider" tabindex="0" aria-label="Nota geral da experiência" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+              <span class="overall-segment" data-value="1"><span class="overall-star">★</span></span>
+              <span class="overall-segment" data-value="2"><span class="overall-star">★</span></span>
+              <span class="overall-segment" data-value="3"><span class="overall-star">★</span></span>
+              <span class="overall-segment" data-value="4"><span class="overall-star">★</span></span>
+              <span class="overall-segment" data-value="5"><span class="overall-star">★</span></span>
+            </div>
+            <div class="overall-hints"><span>1 · Ruim</span><span>5 · Excelente</span></div>
+          </div>
+
+          <div class="detail-label">
+            <strong>Avalie cada ponto da experiência</strong>
+            <span>1 a 5 estrelas</span>
+          </div>
+
+          <div class="ratings">
+            <div class="rating-row" data-key="atendimento">
+              <div class="rating-row-top"><span class="rating-name">Atendimento</span><span class="rating-result" aria-live="polite">Sem nota</span></div>
+              <input class="sr-only rating-value-input" type="hidden" name="nota_atendimento" value="">
+              <div class="rating-scale" role="slider" tabindex="0" aria-label="Avaliação de Atendimento" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+                <span class="scale-segment" data-value="1"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="2"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="3"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="4"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="5"><span class="grow-star">★</span></span>
+              </div>
+              <div class="rating-hints"><span>1</span><span>5</span></div>
+            </div>
+
+            <div class="rating-row" data-key="ambiente">
+              <div class="rating-row-top"><span class="rating-name">Ambiente</span><span class="rating-result" aria-live="polite">Sem nota</span></div>
+              <input class="sr-only rating-value-input" type="hidden" name="nota_ambiente" value="">
+              <div class="rating-scale" role="slider" tabindex="0" aria-label="Avaliação de Ambiente" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+                <span class="scale-segment" data-value="1"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="2"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="3"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="4"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="5"><span class="grow-star">★</span></span>
+              </div>
+              <div class="rating-hints"><span>1</span><span>5</span></div>
+            </div>
+
+            <div class="rating-row" data-key="musico">
+              <div class="rating-row-top"><span class="rating-name">Músico (Banda)</span><span class="rating-result" aria-live="polite">Sem nota</span></div>
+              <input class="sr-only rating-value-input" type="hidden" name="nota_musico" value="">
+              <div class="rating-scale" role="slider" tabindex="0" aria-label="Avaliação do Músico ou Banda" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+                <span class="scale-segment" data-value="1"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="2"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="3"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="4"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="5"><span class="grow-star">★</span></span>
+              </div>
+              <div class="rating-hints"><span>1</span><span>5</span></div>
+            </div>
+
+            <div class="rating-row" data-key="bebidas">
+              <div class="rating-row-top"><span class="rating-name">Bebidas</span><span class="rating-result" aria-live="polite">Sem nota</span></div>
+              <input class="sr-only rating-value-input" type="hidden" name="nota_bebidas" value="">
+              <div class="rating-scale" role="slider" tabindex="0" aria-label="Avaliação de Bebidas" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+                <span class="scale-segment" data-value="1"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="2"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="3"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="4"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="5"><span class="grow-star">★</span></span>
+              </div>
+              <div class="rating-hints"><span>1</span><span>5</span></div>
+            </div>
+
+            <div class="rating-row" data-key="conforto">
+              <div class="rating-row-top"><span class="rating-name">Conforto</span><span class="rating-result" aria-live="polite">Sem nota</span></div>
+              <input class="sr-only rating-value-input" type="hidden" name="nota_conforto" value="">
+              <div class="rating-scale" role="slider" tabindex="0" aria-label="Avaliação de Conforto" aria-valuemin="1" aria-valuemax="5" aria-valuenow="0">
+                <span class="scale-segment" data-value="1"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="2"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="3"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="4"><span class="grow-star">★</span></span>
+                <span class="scale-segment" data-value="5"><span class="grow-star">★</span></span>
+              </div>
+              <div class="rating-hints"><span>1</span><span>5</span></div>
+            </div>
+          </div>
+
+          <div class="error" id="ratings-error"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Quer deixar um comentário?</h2>
+              <p class="section-desc">Conte um pouco mais sobre sua experiência.</p>
+            </div>
+            <div class="step">03</div>
+          </div>
+
+          <div class="field full">
+            <p class="comment-prompt" id="comment-prompt">Conte um pouco mais sobre sua experiência.</p>
+            <label class="label" for="suggestion">Mensagem</label>
+            <div class="comment-wrap">
+              <textarea class="textarea" id="suggestion" name="sugestao" maxlength="300" placeholder="Escreva aqui... (opcional)"></textarea>
+              <span class="char-count" id="char-count">0 / 300</span>
+            </div>
+            <div class="error" id="comment-error"></div>
+            <div class="comment-wrap-spacer" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <div class="return-card" id="return-card">
+          <h3 class="return-title">Você voltaria ao Amambay?</h3>
+          <p class="return-copy">Opcional · sua resposta ajuda a medir a intenção de retorno após esta experiência.</p>
+          <div class="return-options" role="radiogroup" aria-label="Você voltaria ao Amambay?">
+            <div class="return-option"><input id="voltaria-sim" type="radio" name="voltaria" value="Sim"><label for="voltaria-sim">Sim</label></div>
+            <div class="return-option"><input id="voltaria-talvez" type="radio" name="voltaria" value="Talvez"><label for="voltaria-talvez">Talvez</label></div>
+            <div class="return-option"><input id="voltaria-nao" type="radio" name="voltaria" value="Não"><label for="voltaria-nao">Não</label></div>
+          </div>
+          <div class="error" id="return-error"></div>
+        </div>
+
+        <button class="submit" id="submit-button" type="submit">
+          <span class="normal">Enviar avaliação</span>
+          <span class="busy"><i class="spinner"></i> Enviando...</span>
+        </button>
+        <div class="error" id="submit-error"></div>
+        <div class="offline-notice" id="offline-notice" role="status">Sem conexão. Reconecte-se para enviar sua avaliação.</div>
+        <p class="note">Sua avaliação é usada para melhorar a experiência no Amambay Hotel Casino.</p>
+      </div>
+    </form>
+
+    <div class="success" id="success" aria-live="polite">
+      <div class="success-icon">✓</div>
+      <h2>Obrigado.</h2>
+      <p>Sua avaliação foi enviada e já faz parte do nosso acompanhamento de experiência.</p>
+      <div class="success-reference" id="success-reference">REGISTRO</div>
+      <div class="success-return">
+        <span>Voltando ao início...</span>
+        <div class="success-progress"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">18+ · Jogue com responsabilidade · Amambay Hotel Casino</footer>
+</main>
+<script>
+// CONFIGURAÇÃO HCA — cole aqui a URL do Web App do Google Apps Script.
+// A senha do e-mail NÃO deve ser colocada neste HTML.
+const HCA_ENDPOINT='https://script.google.com/macros/s/AKfycbyoSDgcuiUbH9xMkMHXtBsPf2uPLqiHhMHqVAIFiIHO6wxS9Jll7AsaChBf0saGzvlNwg/exec';
+
+// V37 — contexto operacional. Permite QR Codes diferentes usando:
+// ?origem=bar&ponto=mesa-12&mesa=12&campanha=setembro&lang=es
+const HCA_SESSION_STARTED=Date.now();
+const HCA_QUERY=new URLSearchParams(location.search);
+const safeParam=(name,max=60)=>(HCA_QUERY.get(name)||'').replace(/[^\p{L}\p{N}_.\- ]/gu,'').slice(0,max);
+const initialLang=['pt','es','en','gn'].includes((HCA_QUERY.get('lang')||'').toLowerCase()) ? HCA_QUERY.get('lang').toLowerCase() : 'pt';
+function makeResponseId(){
+  const now=new Date();
+  const stamp=now.toISOString().replace(/\D/g,'').slice(2,14);
+  const rnd=(globalThis.crypto?.getRandomValues)?Array.from(crypto.getRandomValues(new Uint8Array(3)),b=>b.toString(16).padStart(2,'0')).join('').toUpperCase():Math.random().toString(36).slice(2,8).toUpperCase();
+  return `HCA-${stamp}-${rnd}`;
+}
+
+
+
+let currentLang='pt';
+const I18N={
+  es:{
+    'Avaliação de Conforto':'Evaluación de Comodidad','Avaliação de Bebidas':'Evaluación de Bebidas','Avaliação do Músico ou Banda':'Evaluación del Músico o Banda','Avaliação de Ambiente':'Evaluación de Ambiente','Avaliação de Atendimento':'Evaluación de Atención','Nota geral da experiência':'Calificación general de la experiencia','Avaliação de experiência':'Evaluación de experiencia',
+    'Como foi a sua experiência no Amambay?':'¿Cómo fue tu experiencia en Amambay?','Sua opinião nos ajuda a tornar cada visita ainda melhor.':'Tu opinión nos ayuda a hacer que cada visita sea aún mejor.','Seus dados':'Tus datos','Informe seus dados para continuar.':'Ingresa tus datos para continuar.','Nome':'Nombre','Como você gostaria de ser identificado na sua avaliação.':'Cómo te gustaría ser identificado en tu evaluación.','Seu nome':'Tu nombre',
+    'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Ingresa tu WhatsApp. El país, la bandera y el prefijo internacional se identifican automáticamente; si hace falta, también puedes elegir el país.','Você voltaria ao Amambay?':'¿Volverías al Amambay?','Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Tu respuesta ayuda a medir la intención de volver después de esta experiencia.','Sim':'Sí','Talvez':'Tal vez','Não':'No','Buscar país...':'Buscar país...','Como foi sua experiência?':'¿Cómo fue tu experiencia?','Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'Primero, da una calificación general. Después, evalúa los puntos principales.','A nota geral é o principal indicador. As categorias abaixo ajudam a equipe a entender onde acertamos e onde devemos melhorar.':'La calificación general es el indicador principal. Las categorías de abajo ayudan al equipo a entender qué hacemos bien y qué debemos mejorar.','Sua nota geral':'Tu calificación general','Arraste ou toque, do menor para o maior.':'Desliza o toca, de menor a mayor.','Ainda sem nota':'Aún sin calificación','1 · Ruim':'1 · Malo','5 · Excelente':'5 · Excelente','Avalie cada ponto da experiência':'Evalúa cada punto de la experiencia','1 a 5 estrelas':'1 a 5 estrellas','Atendimento':'Atención','Ambiente':'Ambiente','Músico (Banda)':'Músico (Banda)','Bebidas':'Bebidas','Conforto':'Comodidad','Sem nota':'Sin calificación','Quer deixar um comentário?':'¿Quieres dejar un comentario?','Conte o que você achou da experiência. Este campo é obrigatório.':'Opcional. Puede ser un elogio, una sugerencia o algo que te haya molestado.','Conte um pouco mais sobre sua experiência.':'Cuéntanos un poco más sobre tu experiencia.','Mensagem':'Mensaje','Escreva aqui...':'Escribe aquí...','Enviar avaliação':'Enviar evaluación','Enviando...':'Enviando...','Sua avaliação é usada para melhorar a experiência no Amambay Hotel Casino.':'Tu evaluación se utiliza para mejorar la experiencia en Amambay Hotel Casino.','Obrigado.':'Gracias.','Sua avaliação foi enviada e já faz parte do nosso acompanhamento de experiência.':'Tu evaluación fue enviada y ya forma parte de nuestro seguimiento de experiencia.','Voltando ao início...':'Volviendo al inicio...','18+ · Jogue com responsabilidade · Amambay Hotel Casino':'18+ · Juega con responsabilidad · Amambay Hotel Casino','Não preencha:':'No completar:'
+  },
+  en:{
+    'Avaliação de Conforto':'Comfort rating','Avaliação de Bebidas':'Beverage rating','Avaliação do Músico ou Banda':'Musician or band rating','Avaliação de Ambiente':'Atmosphere rating','Avaliação de Atendimento':'Service rating','Nota geral da experiência':'Overall experience rating','Avaliação de experiência':'Experience survey',
+    'Como foi a sua experiência no Amambay?':'How was your experience at Amambay?','Sua opinião nos ajuda a tornar cada visita ainda melhor.':'Your opinion helps us make every visit even better.','Seus dados':'Your details','Informe seus dados para continuar.':'Enter your details to continue.','Nome':'Name','Como você gostaria de ser identificado na sua avaliação.':'How would you like to be identified in your review?','Seu nome':'Your name',
+    'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Enter your WhatsApp number. The country, flag and international code are detected automatically; you can also choose the country if needed.','Você voltaria ao Amambay?':'Would you return to Amambay?','Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Your answer helps us understand your intention to return after this experience.','Sim':'Yes','Talvez':'Maybe','Não':'No','Buscar país...':'Search country...','Como foi sua experiência?':'How was your experience?','Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'First, give an overall rating. Then rate the main parts of your experience.','A nota geral é o principal indicador. As categorias abaixo ajudam a equipe a entender onde acertamos e onde devemos melhorar.':'The overall rating is our main indicator. The categories below help us understand what went well and what we should improve.','Sua nota geral':'Your overall rating','Arraste ou toque, do menor para o maior.':'Drag or tap from lowest to highest.','Ainda sem nota':'Not rated yet','1 · Ruim':'1 · Poor','5 · Excelente':'5 · Excellent','Avalie cada ponto da experiência':'Rate each part of your experience','1 a 5 estrelas':'1 to 5 stars','Atendimento':'Service','Ambiente':'Atmosphere','Músico (Banda)':'Musician (Band)','Bebidas':'Beverages','Conforto':'Comfort','Sem nota':'Not rated','Quer deixar um comentário?':'Would you like to leave a comment?','Conte o que você achou da experiência. Este campo é obrigatório.':'Optional. You can leave a compliment, suggestion or tell us about something that bothered you.','Conte um pouco mais sobre sua experiência.':'Tell us a little more about your experience.','Mensagem':'Message','Escreva aqui...':'Write here...','Enviar avaliação':'Submit review','Enviando...':'Sending...','Sua avaliação é usada para melhorar a experiência no Amambay Hotel Casino.':'Your review helps us improve the experience at Amambay Hotel Casino.','Obrigado.':'Thank you.','Sua avaliação foi enviada e já faz parte do nosso acompanhamento de experiência.':'Your review has been submitted and is now part of our experience tracking.','Voltando ao início...':'Returning to the start...','18+ · Jogue com responsabilidade · Amambay Hotel Casino':'18+ · Gamble responsibly · Amambay Hotel Casino','Não preencha:':'Do not fill in:'
+  },
+  gn:{
+    'Avaliação de Conforto':'Confort rehegua ñemomba’e','Avaliação de Bebidas':'Mboy’u rehegua ñemomba’e','Avaliação do Músico ou Banda':'Músiko térã aty rehegua ñemomba’e','Avaliação de Ambiente':'Tenda rehegua ñemomba’e','Avaliação de Atendimento':'Ñangareko rehegua ñemomba’e','Nota geral da experiência':'Ne rembihasa ñemomba’e guasu','Avaliação de experiência':'Tembihasa ñemomba’e',
+    'Como foi a sua experiência no Amambay?':'Mba’éichapa ne rembihasa Amambay-pe?','Sua opinião nos ajuda a tornar cada visita ainda melhor.':'Ne ñe’ẽ orepytyvõ romoporãve hag̃ua peteĩteĩ nde jeju Amambay-pe.','Seus dados':'Ne mba’ekuaarã','Informe seus dados para continuar.':'Emoĩ ne mba’ekuaarã recontinua hag̃ua.','Nome':'Téra','Como você gostaria de ser identificado na sua avaliação.':'Mba’éichapa reipota rohenói ko ñemomba’épe.','Seu nome':'Ne réra',
+    'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Emoĩ ne WhatsApp. Tetã, poyvi ha DDI ojehechakuaa ijeheguiete; tekotevẽramo ikatu avei eiporavo tetã.','Você voltaria ao Amambay?':'Rejúta jeýpa Amambay-pe?','Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Ne mbohovái orepytyvõ roikuaa hag̃ua rejujeysepa ko tembihasa rire.','Sim':'Hẽe','Talvez':'Ikatu','Não':'Nahániri','Buscar país...':'Eheka tetã...','Como foi sua experiência?':'Mba’éichapa ne rembihasa?','Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'Tenonderã eme’ẽ ñemomba’e guasu. Upe rire, emomba’e umi mba’e iñimportantevéva.','A nota geral é o principal indicador. As categorias abaixo ajudam a equipe a entender onde acertamos e onde devemos melhorar.':'Ñemomba’e guasu ha’e pe mba’e iñimportantevéva. Umi aty iguýpe orepytyvõ roikuaa hag̃ua mba’épa rojapo porã ha mba’épa romoporãveva’erã.','Sua nota geral':'Ne ñemomba’e guasu','Arraste ou toque, do menor para o maior.':'Emongu’e térã epoko michĩvévagui tuichavéva peve.','Ainda sem nota':'Ne’ĩra emomba’e','1 · Ruim':'1 · Vai','5 · Excelente':'5 · Iporãiterei','Avalie cada ponto da experiência':'Emomba’e peteĩteĩ ne rembihasa','1 a 5 estrelas':'1 guive 5 mbyja peve','Atendimento':'Ñangareko','Ambiente':'Tenda','Músico (Banda)':'Músiko (Aty)','Bebidas':'Mboy’u','Conforto':'Confort','Sem nota':'Ne’ĩra emomba’e','Quer deixar um comentário?':'Rehejase peteĩ ñe’ẽ?','Conte o que você achou da experiência. Este campo é obrigatório.':'Natekotevẽi. Ikatu ha’e ñemomba’eguasu, ñe’ẽporã térã peteĩ mba’e ndeguerohory’ỹva.','Conte um pouco mais sobre sua experiência.':'Emombe’uve ne rembihasa rehe.','Mensagem':'Ñe’ẽ','Escreva aqui...':'Ehai ko’ápe...','Enviar avaliação':'Emondo ñemomba’e','Enviando...':'Oñemondo...','Sua avaliação é usada para melhorar a experiência no Amambay Hotel Casino.':'Ne ñemomba’e ojeporu romoporãve hag̃ua Amambay Hotel Casino-pe.','Obrigado.':'Aguyje.','Sua avaliação foi enviada e já faz parte do nosso acompanhamento de experiência.':'Ne ñemomba’e oñemondo ha oike ore seguimiento-pe.','Voltando ao início...':'Ojevy ñepyrũme...','18+ · Jogue com responsabilidade · Amambay Hotel Casino':'18+ · Eñembosarái responsabilidad reheve · Amambay Hotel Casino','Não preencha:':'Ani emyenyhẽ:'
+  }
+};
+Object.assign(I18N.es,{
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Cuéntanos qué te pareció la experiencia. Este campo es obligatorio.',
+  'Conte um pouco mais sobre sua experiência.':'Cuéntanos un poco más sobre tu experiencia.'
+});
+Object.assign(I18N.en,{
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Tell us what you thought of the experience. This field is required.',
+  'Conte um pouco mais sobre sua experiência.':'Tell us a little more about your experience.'
+});
+Object.assign(I18N.gn,{
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Emombe’u mba’épa repensa ko tembihasa rehe. Ko tenda oñemyenyhẽva’erã.',
+  'Conte um pouco mais sobre sua experiência.':'Emombe’uve michĩmi ne rembihasa rehe.'
+});
+
+// V38 — apenas as estrelas são obrigatórias; demais campos são opcionais.
+Object.assign(I18N.es,{
+  'Informe seus dados para continuar.':'Deja tus datos para identificar tu evaluación.',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Cuéntanos un poco más sobre tu experiencia.',
+  'Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Opcional · tu respuesta ayuda a medir la intención de volver después de esta experiencia.',
+  'Seu nome':'Tu nombre (opcional)',
+  'Escreva aqui...':'Escribe aquí... (opcional)'
+});
+Object.assign(I18N.en,{
+  'Informe seus dados para continuar.':'Leave your details so we can identify your review.',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Tell us a little more about your experience.',
+  'Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Optional · your answer helps us measure your intention to return after this experience.',
+  'Seu nome':'Your name (optional)',
+  'Escreva aqui...':'Write here... (optional)'
+});
+Object.assign(I18N.gn,{
+  'Informe seus dados para continuar.':'Eheja ne marandu roikuaa hag̃ua mávapa omondo ko ñemomba’e.',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Emombe’uve michĩmi ne rembihasa rehe.',
+  'Sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Natekotevẽi · ne mbohovái orepytyvõ roikuaa hag̃ua rejujeysepa.',
+  'Seu nome':'Ne réra (natekotevẽi)',
+  'Escreva aqui...':'Ehai ko’ápe... (natekotevẽi)'
+});
+
+const LANG_META={pt:{code:'PT',flag:'🇧🇷',html:'pt-BR',title:'Avalie sua experiência | Amambay Hotel Casino'},es:{code:'ES',flag:'🇵🇾',html:'es',title:'Evalúa tu experiencia | Amambay Hotel Casino'},en:{code:'EN',flag:'🇺🇸',html:'en',title:'Rate your experience | Amambay Hotel Casino'},gn:{code:'GN',flag:'🇵🇾',html:'gn',title:'Emomba’e ne rembihasa | Amambay Hotel Casino'}};
+function t(pt){return currentLang==='pt'?pt:(I18N[currentLang]?.[pt]||pt)}
+
+Object.assign(I18N.es,{
+  'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Ingresa tu WhatsApp. El país, la bandera y el prefijo internacional se identifican automáticamente.',
+  'Deixe seus dados para identificarmos sua avaliação.':'Deja tus datos para identificar tu evaluación.',
+  'Conte um pouco mais sobre sua experiência.':'Cuéntanos un poco más sobre tu experiencia.',
+  'Opcional · sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Opcional · tu respuesta ayuda a medir la intención de volver después de esta experiencia.',
+  'Seu nome (opcional)':'Tu nombre (opcional)',
+  '981 123 456 (opcional)':'981 123 456 (opcional)',
+  'Escreva aqui... (opcional)':'Escribe aquí... (opcional)'
+});
+Object.assign(I18N.en,{
+  'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Enter your WhatsApp number. The country, flag and international code are detected automatically.',
+  'Deixe seus dados para identificarmos sua avaliação.':'Leave your details so we can identify your review.',
+  'Conte um pouco mais sobre sua experiência.':'Tell us a little more about your experience.',
+  'Opcional · sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Optional · your answer helps us measure your intention to return after this experience.',
+  'Seu nome (opcional)':'Your name (optional)',
+  '981 123 456 (opcional)':'981 123 456 (optional)',
+  'Escreva aqui... (opcional)':'Write here... (optional)'
+});
+Object.assign(I18N.gn,{
+  'Digite seu WhatsApp. O país, a bandeira e o DDI são identificados automaticamente.':'Emoĩ ne WhatsApp. Tetã, poyvi ha DDI ojehechakuaa ijeheguiete.',
+  'Deixe seus dados para identificarmos sua avaliação.':'Eheja ne marandu roikuaa hag̃ua mávapa omondo ko ñemomba’e.',
+  'Conte um pouco mais sobre sua experiência.':'Emombe’uve michĩmi ne rembihasa rehe.',
+  'Opcional · sua resposta ajuda a medir a intenção de retorno após esta experiência.':'Natekotevẽi · ne mbohovái orepytyvõ roikuaa hag̃ua rejujeysepa.',
+  'Seu nome (opcional)':'Ne réra (natekotevẽi)',
+  '981 123 456 (opcional)':'981 123 456 (natekotevẽi)',
+  'Escreva aqui... (opcional)':'Ehai ko’ápe... (natekotevẽi)'
+});
+Object.assign(I18N.es,{
+  'Confira o número':'Revisa el número','Digite seu nome.':'Ingresa tu nombre.','Digite um WhatsApp válido.':'Ingresa un WhatsApp válido.','Dê uma nota geral para sua experiência.':'Da una calificación general a tu experiencia.','Avalie Atendimento, Ambiente, Músico (Banda), Bebidas e Conforto.':'Evalúa Atención, Ambiente, Músico (Banda), Bebidas y Comodidad.','Diga se você voltaria ao Amambay.':'Indica si volverías al Amambay.','Configuração de envio ainda não concluída.':'La configuración de envío aún no está finalizada.','Não foi possível enviar agora. Verifique sua conexão e tente novamente.':'No fue posible enviar ahora. Revisa tu conexión e inténtalo de nuevo.','Se puder, conte o que aconteceu. Isso ajuda nossa equipe a corrigir o problema.':'Si puedes, cuéntanos qué ocurrió. Esto ayuda a nuestro equipo a corregir el problema.','Conte o que podemos melhorar...':'Cuéntanos qué podemos mejorar...','Quer explicar o que faltou para sua experiência ser excelente?':'¿Quieres contarnos qué faltó para que tu experiencia fuera excelente?','Conte um pouco mais...':'Cuéntanos un poco más...','Deixe um elogio ou conte o que tornou sua experiência especial.':'Deja un elogio o cuéntanos qué hizo especial tu experiencia.','O que você mais gostou?':'¿Qué fue lo que más te gustó?','Válido':'Válido'
+});
+Object.assign(I18N.en,{
+  'Confira o número':'Check the number','Digite seu nome.':'Enter your name.','Digite um WhatsApp válido.':'Enter a valid WhatsApp number.','Dê uma nota geral para sua experiência.':'Give an overall rating for your experience.','Avalie Atendimento, Ambiente, Músico (Banda), Bebidas e Conforto.':'Rate Service, Atmosphere, Musician (Band), Beverages and Comfort.','Diga se você voltaria ao Amambay.':'Tell us if you would return to Amambay.','Configuração de envio ainda não concluída.':'The submission setup is not finished yet.','Não foi possível enviar agora. Verifique sua conexão e tente novamente.':'We could not submit your review right now. Check your connection and try again.','Se puder, conte o que aconteceu. Isso ajuda nossa equipe a corrigir o problema.':'If you can, tell us what happened. This helps our team fix the problem.','Conte o que podemos melhorar...':'Tell us what we can improve...','Quer explicar o que faltou para sua experiência ser excelente?':'Would you like to tell us what was missing for an excellent experience?','Conte um pouco mais...':'Tell us a little more...','Deixe um elogio ou conte o que tornou sua experiência especial.':'Leave a compliment or tell us what made your experience special.','O que você mais gostou?':'What did you like most?','Válido':'Valid'
+});
+Object.assign(I18N.gn,{
+  'Confira o número':'Ehecha jey pe número','Digite seu nome.':'Emoĩ ne réra.','Digite um WhatsApp válido.':'Emoĩ peteĩ WhatsApp número oĩporãva.','Dê uma nota geral para sua experiência.':'Eme’ẽ ñemomba’e guasu ne rembihasápe.','Avalie Atendimento, Ambiente, Músico (Banda), Bebidas e Conforto.':'Emomba’e Ñangareko, Tenda, Músiko (Aty), Mboy’u ha Confort.','Diga se você voltaria ao Amambay.':'Emombe’u rejujeypa Amambay-pe.','Configuração de envio ainda não concluída.':'Ñemondo ñemboheko ne’ĩra oñemohu’ã.','Não foi possível enviar agora. Verifique sua conexão e tente novamente.':'Ndaikatúi oñemondo ko’ág̃a. Ehecha ne conexión ha eha’ã jey.','Se puder, conte o que aconteceu. Isso ajuda nossa equipe a corrigir o problema.':'Ikaturamo, emombe’u mba’épa oiko. Kóva orepytyvõ romyatyrõ hag̃ua.','Conte o que podemos melhorar...':'Emombe’u mba’épa ikatu romoporãve...','Quer explicar o que faltou para sua experiência ser excelente?':'Remombe’use mba’épa ofalta ne rembihasa iporãiterei hag̃ua?','Conte um pouco mais...':'Emombe’uve michĩmi...','Deixe um elogio ou conte o que tornou sua experiência especial.':'Eheja peteĩ ñe’ẽporã térã emombe’u mba’épa ojapo ne rembihasa iñambuéva.','O que você mais gostou?':'Mba’épa reguerohoryve?','Válido':'Oĩporã'
+});
+// V37 — consistência real entre idiomas (campos obrigatórios + camada premium)
+Object.assign(I18N.es,{
+  'Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'Primero, da una calificación general. Después, evalúa los puntos principales.',
+  'Quer deixar um comentário?':'¿Quieres dejar un comentario?',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Cuéntanos qué te pareció la experiencia. Este campo es obligatorio.',
+  'Conte um pouco mais sobre sua experiência.':'Cuéntanos un poco más sobre tu experiencia.',
+  'Canal oficial Amambay':'Canal oficial Amambay','3 etapas':'3 etapas','≈ 1 min':'≈ 1 min',
+  'Sem conexão. Reconecte-se para enviar sua avaliação.':'Sin conexión. Vuelve a conectarte para enviar tu evaluación.'
+});
+Object.assign(I18N.en,{
+  'Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'First, give an overall rating. Then rate the main parts of your experience.',
+  'Quer deixar um comentário?':'Would you like to leave a comment?',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Tell us what you thought about the experience. This field is required.',
+  'Conte um pouco mais sobre sua experiência.':'Tell us a little more about your experience.',
+  'Canal oficial Amambay':'Official Amambay channel','3 etapas':'3 steps','≈ 1 min':'≈ 1 min',
+  'Sem conexão. Reconecte-se para enviar sua avaliação.':'You are offline. Reconnect to submit your review.'
+});
+Object.assign(I18N.gn,{
+  'Primeiro, dê uma nota geral. Depois, avalie os principais pontos.':'Eme’ẽ raẽ peteĩ nota general. Upéi emomba’e umi mba’e iñimportantevéva.',
+  'Quer deixar um comentário?':'Rehejasépa peteĩ ñe’ẽ?',
+  'Conte o que você achou da experiência. Este campo é obrigatório.':'Emombe’u mba’éichapa rehecha ne rembihasa. Ko tenda tekotevẽ oñemyenyhẽ.',
+  'Conte um pouco mais sobre sua experiência.':'Emombe’uve michĩmi ne rembihasa rehe.',
+  'Canal oficial Amambay':'Amambay rape oficial','3 etapas':'3 tembiapo','≈ 1 min':'≈ 1 min',
+  'Sem conexão. Reconecte-se para enviar sua avaliação.':'Ndaipóri conexión. Eñembojoaju jey emondo hag̃ua ne ñemomba’e.'
+});
+
+const PT_TEXT=new Map();
+function capturePortuguese(){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  let n; while(n=walker.nextNode()){
+    const v=n.nodeValue.trim();
+    if(v && ['es','en','gn'].some(lang=>I18N[lang]?.[v])) PT_TEXT.set(n,v);
+  }
+  document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>{
+    ['placeholder','aria-label'].forEach(a=>{
+      const v=el.getAttribute(a);
+      if(v && ['es','en','gn'].some(lang=>I18N[lang]?.[v])) el.dataset['pt'+a.replace('-','')]=v;
+    });
+  });
+}
+const LANGUAGE_FLAGS={
+  pt:`<svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" rx="1.5" fill="#009B3A"/><polygon points="14,2.2 25,10 14,17.8 3,10" fill="#FFDF00"/><circle cx="14" cy="10" r="4.4" fill="#002776"/><path d="M10.1 9.2c2.8-1.2 5.4-.9 7.8.7" fill="none" stroke="#fff" stroke-width=".75"/></svg>`,
+  es:`<svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="6.67" rx="1.5" fill="#D52B1E"/><rect y="6.67" width="28" height="6.66" fill="#fff"/><rect y="13.33" width="28" height="6.67" rx="1.5" fill="#0038A8"/><circle cx="14" cy="10" r="2.15" fill="none" stroke="#2C8C3A" stroke-width=".45"/><circle cx="14" cy="10" r=".6" fill="#F5C400"/></svg>`,
+  en:`<svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect y="0" width="28" height="1.54"/><rect y="3.08" width="28" height="1.54"/><rect y="6.16" width="28" height="1.54"/><rect y="9.24" width="28" height="1.54"/><rect y="12.32" width="28" height="1.54"/><rect y="15.4" width="28" height="1.54"/><rect y="18.48" width="28" height="1.52"/></g><rect width="12.5" height="10.8" fill="#3C3B6E"/><g fill="#fff"><circle cx="2" cy="2" r=".45"/><circle cx="5" cy="2" r=".45"/><circle cx="8" cy="2" r=".45"/><circle cx="11" cy="2" r=".45"/><circle cx="3.5" cy="4" r=".45"/><circle cx="6.5" cy="4" r=".45"/><circle cx="9.5" cy="4" r=".45"/><circle cx="2" cy="6" r=".45"/><circle cx="5" cy="6" r=".45"/><circle cx="8" cy="6" r=".45"/><circle cx="11" cy="6" r=".45"/><circle cx="3.5" cy="8" r=".45"/><circle cx="6.5" cy="8" r=".45"/><circle cx="9.5" cy="8" r=".45"/></g></svg>`,
+  gn:`<svg class="lang-flag" viewBox="0 0 28 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="6.67" rx="1.5" fill="#D52B1E"/><rect y="6.67" width="28" height="6.66" fill="#fff"/><rect y="13.33" width="28" height="6.67" rx="1.5" fill="#0038A8"/><circle cx="14" cy="10" r="2.15" fill="none" stroke="#2C8C3A" stroke-width=".45"/><circle cx="14" cy="10" r=".6" fill="#F5C400"/></svg>`
+};
+
+function applyLanguage(lang){
+  currentLang=LANG_META[lang]?lang:'pt';
+  const meta=LANG_META[currentLang];
+  document.documentElement.lang=meta.html;
+  document.getElementById('language-hca').value=currentLang;
+  document.getElementById('language-current-code').textContent=meta.code;
+  document.getElementById('language-current-flag').innerHTML=LANGUAGE_FLAGS[currentLang]||LANGUAGE_FLAGS.pt;
+  document.querySelectorAll('.language-option').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===currentLang));
+  PT_TEXT.forEach((pt,node)=>{node.nodeValue=node.nodeValue.replace(node.nodeValue.trim(),t(pt));});
+  document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>{
+    ['placeholder','aria-label'].forEach(a=>{
+      const key='pt'+a.replace('-',''); const pt=el.dataset[key]; if(pt) el.setAttribute(a,t(pt));
+    });
+  });
+  document.title=meta.title;
+  if(overallInput && overallInput.value) setOverallRating(overallInput.value);
+  document.querySelectorAll('.rating-row').forEach(row=>{const v=row.querySelector('.rating-value-input')?.value;if(v)setRating(row,v);});
+  if(phoneInput.value.trim()) updatePhone(false);
+  closeLanguageMenu();
+}
+
+function setHcaTimestamp(){
+  const now=new Date();
+  const parts=new Intl.DateTimeFormat('pt-BR',{
+    timeZone:'America/Asuncion',
+    year:'numeric',month:'2-digit',day:'2-digit',
+    hour:'2-digit',minute:'2-digit',second:'2-digit',
+    hour12:false
+  }).formatToParts(now).reduce((acc,p)=>{acc[p.type]=p.value;return acc;},{});
+  document.getElementById('date-hca').value=`${parts.day}/${parts.month}/${parts.year}`;
+  document.getElementById('time-hca').value=`${parts.hour}:${parts.minute}:${parts.second}`;
+  document.getElementById('timestamp-iso').value=now.toISOString();
+}
+
+const form=document.getElementById('evaluation-form');
+const nameInput=document.getElementById('name');
+const phoneInput=document.getElementById('phone');
+const phoneStatus=document.getElementById('phone-status');
+const countryLabel=document.getElementById('country-label');
+const phoneNormalized=document.getElementById('phone-normalized');
+const phoneCountry=document.getElementById('phone-country');
+const ratingsError=document.getElementById('ratings-error');
+const submitError=document.getElementById('submit-error');
+const submitButton=document.getElementById('submit-button');
+const suggestion=document.getElementById('suggestion');
+const charCount=document.getElementById('char-count');
+const successBox=document.getElementById('success');
+const overallRating=document.getElementById('overall-rating');
+const overallScale=document.getElementById('overall-scale');
+const overallInput=document.getElementById('nota-geral');
+const overallResult=document.getElementById('overall-result');
+const commentPrompt=document.getElementById('comment-prompt');
+const returnCard=document.getElementById('return-card');
+const returnError=document.getElementById('return-error');
+const completionFill=document.getElementById('completion-fill');
+const offlineNotice=document.getElementById('offline-notice');
+const successReference=document.getElementById('success-reference');
+const responseIdInput=document.getElementById('response-id');
+const startedAtInput=document.getElementById('started-at');
+const responseSecondsInput=document.getElementById('response-seconds');
+const deviceTypeInput=document.getElementById('device-type');
+const viewportSizeInput=document.getElementById('viewport-size');
+const qrPointInput=document.getElementById('qr-point');
+const tableCodeInput=document.getElementById('table-code');
+const campaignCodeInput=document.getElementById('campaign-code');
+
+function initializeOperationalContext(){
+  responseIdInput.value=makeResponseId();
+  startedAtInput.value=new Date(HCA_SESSION_STARTED).toISOString();
+  deviceTypeInput.value=matchMedia('(max-width:650px)').matches?'mobile':'desktop';
+  viewportSizeInput.value=`${innerWidth}x${innerHeight}`;
+  qrPointInput.value=safeParam('ponto',50);
+  tableCodeInput.value=safeParam('mesa',30);
+  campaignCodeInput.value=safeParam('campanha',60);
+  const origin=safeParam('origem',40)||safeParam('source',40);
+  if(origin)document.getElementById('origin').value=origin;
+}
+function updateNetworkState(){
+  offlineNotice?.classList.toggle('show',!navigator.onLine);
+}
+function premiumProgress(){
+  const values=[
+    nameInput.value.trim().length>=2,
+    !!phoneNormalized.value,
+    !!overallInput.value,
+    ...[...form.querySelectorAll('.rating-value-input')].map(i=>!!i.value),
+    suggestion.value.trim().length>=2,
+    !!form.querySelector('[name="voltaria"]:checked')
+  ];
+  const done=values.filter(Boolean).length;
+  const pct=Math.round((done/values.length)*100);
+  if(completionFill)completionFill.style.width=`${pct}%`;
+  submitButton.dataset.ready=done===values.length?'true':'false';
+}
+window.addEventListener('online',updateNetworkState);
+window.addEventListener('offline',updateNetworkState);
+window.addEventListener('resize',()=>{viewportSizeInput.value=`${innerWidth}x${innerHeight}`;deviceTypeInput.value=matchMedia('(max-width:650px)').matches?'mobile':'desktop';});
+form.addEventListener('input',()=>setTimeout(premiumProgress,0));
+form.addEventListener('change',()=>setTimeout(premiumProgress,0));
+form.addEventListener('pointerup',()=>setTimeout(premiumProgress,0));
+initializeOperationalContext();
+updateNetworkState();
+premiumProgress();
+
+const phoneControl=document.getElementById('phone-control');
+const countryBtn=document.getElementById('phone-country-btn');
+const countryMenu=document.getElementById('phone-country-menu');
+const countrySearch=document.getElementById('phone-country-search');
+const countryList=document.getElementById('phone-country-list');
+const countryFlag=document.getElementById('phone-country-flag');
+const countryEmoji=document.getElementById('phone-country-emoji');
+const countryDial=document.getElementById('phone-country-dial');
+
+const phoneCountries=[
+  {iso:'PY',name:'Paraguai',emoji:'🇵🇾',flagUrl:'https://flagcdn.com/w40/py.png',dial:'+595',placeholder:'981 123 456',min:9,max:9},
+  {iso:'BR',name:'Brasil',emoji:'🇧🇷',flagUrl:'https://flagcdn.com/w40/br.png',dial:'+55',placeholder:'67 9 9123 4567',min:10,max:11},
+  {iso:'AR',name:'Argentina',emoji:'🇦🇷',flagUrl:'https://flagcdn.com/w40/ar.png',dial:'+54',placeholder:'11 2345 6789',min:10,max:11},
+  {iso:'UY',name:'Uruguai',emoji:'🇺🇾',flagUrl:'https://flagcdn.com/w40/uy.png',dial:'+598',placeholder:'99 123 456',min:8,max:8},
+  {iso:'CL',name:'Chile',emoji:'🇨🇱',flagUrl:'https://flagcdn.com/w40/cl.png',dial:'+56',placeholder:'9 1234 5678',min:9,max:9},
+  {iso:'BO',name:'Bolívia',emoji:'🇧🇴',flagUrl:'https://flagcdn.com/w40/bo.png',dial:'+591',placeholder:'71234567',min:8,max:8},
+  {iso:'PE',name:'Peru',emoji:'🇵🇪',flagUrl:'https://flagcdn.com/w40/pe.png',dial:'+51',placeholder:'912 345 678',min:9,max:9},
+  {iso:'CO',name:'Colômbia',emoji:'🇨🇴',flagUrl:'https://flagcdn.com/w40/co.png',dial:'+57',placeholder:'300 123 4567',min:10,max:10},
+  {iso:'EC',name:'Equador',emoji:'🇪🇨',flagUrl:'https://flagcdn.com/w40/ec.png',dial:'+593',placeholder:'99 123 4567',min:9,max:9},
+  {iso:'VE',name:'Venezuela',emoji:'🇻🇪',flagUrl:'https://flagcdn.com/w40/ve.png',dial:'+58',placeholder:'412 123 4567',min:10,max:10},
+  {iso:'US',name:'Estados Unidos',emoji:'🇺🇸',flagUrl:'https://flagcdn.com/w40/us.png',dial:'+1',placeholder:'305 555 0123',min:10,max:10},
+  {iso:'MX',name:'México',emoji:'🇲🇽',flagUrl:'https://flagcdn.com/w40/mx.png',dial:'+52',placeholder:'55 1234 5678',min:10,max:10},
+  {iso:'ES',name:'Espanha',emoji:'🇪🇸',flagUrl:'https://flagcdn.com/w40/es.png',dial:'+34',placeholder:'612 345 678',min:9,max:9},
+  {iso:'PT',name:'Portugal',emoji:'🇵🇹',flagUrl:'https://flagcdn.com/w40/pt.png',dial:'+351',placeholder:'912 345 678',min:9,max:9},
+  {iso:'FR',name:'França',emoji:'🇫🇷',flagUrl:'https://flagcdn.com/w40/fr.png',dial:'+33',placeholder:'6 12 34 56 78',min:9,max:9},
+  {iso:'IT',name:'Itália',emoji:'🇮🇹',flagUrl:'https://flagcdn.com/w40/it.png',dial:'+39',placeholder:'312 345 6789',min:9,max:10},
+  {iso:'DE',name:'Alemanha',emoji:'🇩🇪',flagUrl:'https://flagcdn.com/w40/de.png',dial:'+49',placeholder:'1512 3456789',min:10,max:11},
+  {iso:'GB',name:'Reino Unido',emoji:'🇬🇧',flagUrl:'https://flagcdn.com/w40/gb.png',dial:'+44',placeholder:'7700 900123',min:10,max:10},
+  {iso:'JP',name:'Japão',emoji:'🇯🇵',flagUrl:'https://flagcdn.com/w40/jp.png',dial:'+81',placeholder:'90 1234 5678',min:10,max:10},
+  {iso:'KR',name:'Coreia do Sul',emoji:'🇰🇷',flagUrl:'https://flagcdn.com/w40/kr.png',dial:'+82',placeholder:'10 1234 5678',min:9,max:10}
+];
+
+let currentPhoneCountry=phoneCountries[0];
+
+function renderPhoneCountries(filter=''){
+  const term=filter.trim().toLowerCase();
+  countryList.innerHTML='';
+  phoneCountries
+    .filter(c=>!term || c.name.toLowerCase().includes(term) || c.iso.toLowerCase().includes(term) || c.dial.includes(term))
+    .forEach(c=>{
+      const b=document.createElement('button');
+      b.type='button';
+      b.className='phone-country-option'+(c.iso===currentPhoneCountry.iso?' active':'');
+      b.setAttribute('role','option');
+      b.innerHTML=`<span><img class="flag-img" src="${c.flagUrl}" alt="${c.name}" onerror="this.classList.add('failed');this.style.display='none'"><span class="flag-emoji">${c.emoji}</span></span><span class="country-name">${c.name}</span><span class="dial">${c.dial}</span>`;
+      b.addEventListener('click',()=>{
+        selectPhoneCountry(c);
+        closePhoneCountryMenu();
+        if(phoneInput.value.trim()) updatePhone(false);
+      });
+      countryList.appendChild(b);
+    });
+}
+
+const validBrazilDDDs=new Set(['11','12','13','14','15','16','17','18','19','21','22','24','27','28','31','32','33','34','35','37','38','41','42','43','44','45','46','47','48','49','51','53','54','55','61','62','63','64','65','66','67','68','69','71','73','74','75','77','79','81','82','83','84','85','86','87','88','89','91','92','93','94','95','96','97','98','99']);
+
+function selectPhoneCountry(country,opts={}){
+  const {focus=true,keepStatus=false,detected=false}=opts;
+  currentPhoneCountry=country;
+  countryFlag.src=country.flagUrl;
+  countryFlag.alt=country.name;
+  countryFlag.classList.remove('failed');
+  countryFlag.style.display='block';
+  countryEmoji.textContent=country.emoji;
+  countryEmoji.style.display='none';
+  countryFlag.onerror=()=>{
+    countryFlag.classList.add('failed');
+    countryFlag.style.display='none';
+    countryEmoji.style.display='inline-block';
+  };
+  countryDial.textContent=country.dial;
+  countryLabel.textContent=`${country.name} · ${country.dial}`;
+  phoneCountry.value=country.name;
+  phoneInput.placeholder=country.placeholder;
+  if(detected){
+    phoneControl.classList.remove('country-detected');
+    void phoneControl.offsetWidth;
+    phoneControl.classList.add('country-detected');
+    window.setTimeout(()=>phoneControl.classList.remove('country-detected'),560);
+  }
+  if(!keepStatus){
+    phoneNormalized.value='';
+    phoneStatus.textContent='';
+    phoneStatus.className='phone-status';
+    phoneControl.classList.remove('invalid');
+  }
+  renderPhoneCountries(countrySearch.value);
+  if(focus) phoneInput.focus();
+}
+function openPhoneCountryMenu(){
+  countryMenu.classList.add('open');
+  countryBtn.setAttribute('aria-expanded','true');
+  countrySearch.value='';
+  renderPhoneCountries();
+  setTimeout(()=>countrySearch.focus(),0);
+}
+function closePhoneCountryMenu(){
+  countryMenu.classList.remove('open');
+  countryBtn.setAttribute('aria-expanded','false');
+}
+countryBtn.addEventListener('click',e=>{
+  e.stopPropagation();
+  countryMenu.classList.contains('open') ? closePhoneCountryMenu() : openPhoneCountryMenu();
+});
+countrySearch.addEventListener('input',()=>renderPhoneCountries(countrySearch.value));
+document.addEventListener('click',e=>{if(!e.target.closest('.phone-country')) closePhoneCountryMenu();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closePhoneCountryMenu();});
+
+function countryByIso(iso){return phoneCountries.find(c=>c.iso===iso)}
+
+function detectPhoneCountry(value){
+  const raw=(value||'').trim();
+  let digits=raw.replace(/\D/g,'');
+  if(!digits)return null;
+  if(digits.startsWith('00'))digits=digits.slice(2);
+
+  const byDial=[...phoneCountries].sort((a,b)=>b.dial.replace(/\D/g,'').length-a.dial.replace(/\D/g,'').length);
+  const explicitInternational=raw.startsWith('+') || raw.replace(/\s/g,'').startsWith('00');
+  if(explicitInternational){
+    const hit=byDial.find(c=>digits.startsWith(c.dial.replace(/\D/g,'')));
+    if(hit)return hit;
+  }
+
+  // Mesma regra do Bet: Brasil só entra automaticamente se o DDD for válido
+  // e o celular tiver 9 dígitos começando por 7, 8 ou 9.
+  let br=digits;
+  if(br.startsWith('55')&&br.length===13)br=br.slice(2);
+  if(br.startsWith('0')&&br.length===12)br=br.slice(1);
+  if(br.length===11){
+    const ddd=br.slice(0,2),sub=br.slice(2);
+    if(validBrazilDDDs.has(ddd)&&/^[789]\d{8}$/.test(sub))return countryByIso('BR');
+  }
+
+  if(/^09\d{8}$/.test(digits)||/^9\d{8}$/.test(digits)||/^5959\d{8}$/.test(digits))return countryByIso('PY');
+
+  // Argentina: reconhece +54/54 e também número nacional que não caiu na regra de DDD do Brasil.
+  if(/^549\d{10}$/.test(digits)||/^54\d{10,11}$/.test(digits))return countryByIso('AR');
+  if((digits.length===10||digits.length===11)&&!raw.startsWith('+'))return countryByIso('AR');
+
+  const hit=byDial.find(c=>{
+    const d=c.dial.replace(/\D/g,'');
+    return digits.startsWith(d)&&digits.length>=d.length+c.min&&digits.length<=d.length+c.max;
+  });
+  return hit||null;
+}
+
+function normalizePhone(){
+  const raw=phoneInput.value.trim();
+  let digits=raw.replace(/\D/g,'');
+  if(digits.startsWith('00'))digits=digits.slice(2);
+  let local=digits;
+
+  if(currentPhoneCountry.iso==='PY'){
+    if(local.startsWith('595'))local=local.slice(3);
+    if(local.startsWith('0'))local=local.slice(1);
+    if(/^9\d{8}$/.test(local))return{valid:true,number:'+595'+local,country:'Paraguai'};
+    return{valid:false,number:'',country:''};
+  }
+
+  if(currentPhoneCountry.iso==='BR'){
+    if(local.startsWith('55'))local=local.slice(2);
+    if(local.startsWith('0')&&local.length===12)local=local.slice(1);
+    if(local.length===11){
+      const ddd=local.slice(0,2),sub=local.slice(2);
+      if(validBrazilDDDs.has(ddd)&&/^[789]\d{8}$/.test(sub))return{valid:true,number:'+55'+local,country:'Brasil'};
+    }
+    return{valid:false,number:'',country:''};
+  }
+
+  if(currentPhoneCountry.iso==='AR'){
+    if(local.startsWith('54'))local=local.slice(2);
+    if(local.startsWith('0'))local=local.slice(1);
+    if(/^9\d{10}$/.test(local))return{valid:true,number:'+54'+local,country:'Argentina'};
+    if(/^\d{10}$/.test(local))return{valid:true,number:'+549'+local,country:'Argentina'};
+    return{valid:false,number:'',country:''};
+  }
+
+  const dialDigits=currentPhoneCountry.dial.replace(/\D/g,'');
+  if(local.startsWith(dialDigits))local=local.slice(dialDigits.length);
+  if(local.startsWith('0'))local=local.slice(1);
+  if(local.length>=currentPhoneCountry.min&&local.length<=currentPhoneCountry.max){
+    return{valid:true,number:currentPhoneCountry.dial+local,country:currentPhoneCountry.name};
+  }
+  return{valid:false,number:'',country:''};
+}
+
+function updatePhone(showError=false){
+  phoneControl.classList.remove('invalid');
+  phoneStatus.textContent='';
+  phoneStatus.className='phone-status';
+  phoneNormalized.value='';
+  if(!phoneInput.value.trim())return false;
+
+  // O número digitado manda. A bandeira escolhida serve só como ajuda visual.
+  const detected=detectPhoneCountry(phoneInput.value);
+  if(detected&&detected.iso!==currentPhoneCountry.iso){
+    selectPhoneCountry(detected,{focus:false,keepStatus:true,detected:true});
+  }
+
+  const parsed=normalizePhone();
+  if(parsed.valid){
+    phoneNormalized.value=parsed.number;
+    phoneCountry.value=parsed.country||currentPhoneCountry.name;
+    countryLabel.textContent=`${parsed.country||currentPhoneCountry.name} · ${currentPhoneCountry.dial}`;
+    phoneStatus.textContent=`${t('Válido')} · ${parsed.number}`;
+    phoneStatus.classList.add('valid');
+    return true;
+  }
+  if(showError){
+    phoneControl.classList.add('invalid');
+    phoneStatus.textContent=t('Confira o número');
+    phoneStatus.classList.add('invalid');
+  }
+  return false;
+}
+
+phoneInput.addEventListener('beforeinput',e=>{
+  if(e.data&&/[^0-9+()\-\s]/.test(e.data))e.preventDefault();
+});
+phoneInput.addEventListener('input',()=>{
+  phoneInput.value=phoneInput.value.replace(/[^0-9+()\-\s]/g,'');
+  document.getElementById('phone-error').textContent='';
+  updatePhone(false);
+});
+phoneInput.addEventListener('blur',()=>{if(phoneInput.value.trim())updatePhone(true);});
+
+selectPhoneCountry(currentPhoneCountry,{focus:false});
+
+const overallText={pt:{1:'Ruim',2:'Regular',3:'Boa',4:'Muito boa',5:'Excelente'},es:{1:'Malo',2:'Regular',3:'Buena',4:'Muy buena',5:'Excelente'},en:{1:'Poor',2:'Fair',3:'Good',4:'Very good',5:'Excellent'},gn:{1:'Vai',2:'Jepivegua',3:'Iporã',4:'Iporãiterei',5:'Tuichaiterei'}};
+
+function setOverallRating(value){
+  const n=Math.max(1,Math.min(5,Number(value)||1));
+  overallRating.classList.remove('required-invalid');
+  overallInput.value=n;
+  overallRating.classList.add('has-value');
+  overallRating.dataset.score=String(n);
+  overallRating.classList.toggle('five-star',n===5);
+  overallResult.textContent=`${n}/5 · ${(overallText[currentLang]||overallText.pt)[n]}`;
+  overallScale.setAttribute('aria-valuenow',String(n));
+  overallScale.querySelectorAll('.overall-segment').forEach(seg=>{
+    const active=Number(seg.dataset.value)<=n;
+    seg.classList.toggle('active',active);
+    const star=seg.querySelector('.overall-star');
+    if(star){
+      star.style.setProperty('color',active?'#FFD84D':'#75687f','important');
+      star.style.setProperty('opacity',active?'1':'.78','important');
+      star.style.setProperty('filter',active?'drop-shadow(0 0 6px rgba(255,216,77,.46))':'none','important');
+      star.style.setProperty('text-shadow',active?'0 0 10px rgba(255,216,77,.34)':'none','important');
+    }
+  });
+
+  if(n<=2){
+    commentPrompt.textContent=t('Se puder, conte o que aconteceu. Isso ajuda nossa equipe a corrigir o problema.');
+    suggestion.placeholder=t('Conte o que podemos melhorar...');
+  }else if(n===3){
+    commentPrompt.textContent=t('Quer explicar o que faltou para sua experiência ser excelente?');
+    suggestion.placeholder=t('Conte um pouco mais...');
+  }else{
+    commentPrompt.textContent=t('Deixe um elogio ou conte o que tornou sua experiência especial.');
+    suggestion.placeholder=t('O que você mais gostou?');
+  }
+  ratingsError.textContent='';
+  refreshSpreadsheetFields();
+}
+
+function overallValueFromPointer(clientX){
+  const r=overallScale.getBoundingClientRect();
+  const ratio=Math.max(0,Math.min(.9999,(clientX-r.left)/r.width));
+  return Math.floor(ratio*5)+1;
+}
+
+let overallDragging=false;
+overallScale.addEventListener('pointerdown',e=>{
+  overallDragging=true;
+  overallScale.setPointerCapture(e.pointerId);
+  setOverallRating(overallValueFromPointer(e.clientX));
+});
+let overallRaf=0;
+let overallPendingX=0;
+overallScale.addEventListener('pointermove',e=>{
+  if(!overallDragging)return;
+  overallPendingX=e.clientX;
+  if(overallRaf)return;
+  overallRaf=requestAnimationFrame(()=>{
+    setOverallRating(overallValueFromPointer(overallPendingX));
+    overallRaf=0;
+  });
+});
+overallScale.addEventListener('pointerup',()=>overallDragging=false);
+overallScale.addEventListener('pointercancel',()=>overallDragging=false);
+overallScale.addEventListener('mousemove',e=>{
+  if(overallDragging)return;
+  const preview=overallValueFromPointer(e.clientX);
+  overallScale.querySelectorAll('.overall-segment').forEach(seg=>{
+    seg.classList.toggle('preview',Number(seg.dataset.value)<=preview&&!seg.classList.contains('active'));
+  });
+});
+overallScale.addEventListener('mouseleave',()=>{
+  overallScale.querySelectorAll('.overall-segment').forEach(seg=>seg.classList.remove('preview'));
+});
+overallScale.addEventListener('keydown',e=>{
+  const current=Number(overallInput.value)||1;
+  if(['ArrowRight','ArrowUp'].includes(e.key)){
+    e.preventDefault(); setOverallRating(Math.min(5,current+1));
+  }else if(['ArrowLeft','ArrowDown'].includes(e.key)){
+    e.preventDefault(); setOverallRating(Math.max(1,current-1));
+  }else if(/[1-5]/.test(e.key)){
+    setOverallRating(Number(e.key));
+  }
+});
+
+const ratingText={
+  pt:{1:'Precisa melhorar',2:'Regular',3:'Boa',4:'Muito boa',5:'Excelente'},
+  es:{1:'Necesita mejorar',2:'Regular',3:'Buena',4:'Muy buena',5:'Excelente'},
+  en:{1:'Needs improvement',2:'Fair',3:'Good',4:'Very good',5:'Excellent'},
+  gn:{1:'Iporãveva’erã',2:'Jepivegua',3:'Iporã',4:'Iporãiterei',5:'Iporãitereíma'}
+};
+
+function setRating(row,value){
+  const n=Math.max(1,Math.min(5,Number(value)||1));
+  row.classList.remove('required-invalid');
+  row.querySelector('.rating-value-input').value=n;
+  row.classList.add('has-value');
+  row.dataset.score=String(n);
+  row.classList.toggle('five-star',n===5);
+  row.querySelector('.rating-result').textContent=`${n}/5 · ${(ratingText[currentLang]||ratingText.pt)[n]}`;
+  const scale=row.querySelector('.rating-scale');
+  scale.setAttribute('aria-valuenow',String(n));
+  row.querySelectorAll('.scale-segment').forEach(seg=>{
+    const active=Number(seg.dataset.value)<=n;
+    seg.classList.toggle('active',active);
+    const star=seg.querySelector('.grow-star');
+    if(star){
+      star.style.setProperty('color',active?'#FFD84D':'#75687f','important');
+      star.style.setProperty('opacity',active?'1':'.78','important');
+      star.style.setProperty('filter',active?'drop-shadow(0 0 6px rgba(255,216,77,.46))':'none','important');
+      star.style.setProperty('text-shadow',active?'0 0 10px rgba(255,216,77,.34)':'none','important');
+    }
+  });
+  ratingsError.textContent='';
+  refreshSpreadsheetFields();
+}
+
+function valueFromPointer(scale,clientX){
+  const r=scale.getBoundingClientRect();
+  const ratio=Math.max(0,Math.min(.9999,(clientX-r.left)/r.width));
+  return Math.floor(ratio*5)+1;
+}
+
+document.querySelectorAll('.rating-row').forEach(row=>{
+  const scale=row.querySelector('.rating-scale');
+  let dragging=false;
+
+  // Clique/toque direto em cada estrela — funciona mesmo quando pointer capture falhar
+  row.querySelectorAll('.scale-segment').forEach(seg=>{
+    seg.addEventListener('click',e=>{
+      e.preventDefault();
+      e.stopPropagation();
+      setRating(row,Number(seg.dataset.value));
+    });
+  });
+
+  scale.addEventListener('pointerdown',e=>{
+    dragging=true;
+    try{scale.setPointerCapture(e.pointerId);}catch(_){}
+    setRating(row,valueFromPointer(scale,e.clientX));
+  });
+  let dragRaf=0;
+  let dragPendingX=0;
+  scale.addEventListener('pointermove',e=>{
+    if(!dragging)return;
+    dragPendingX=e.clientX;
+    if(dragRaf)return;
+    dragRaf=requestAnimationFrame(()=>{
+      setRating(row,valueFromPointer(scale,dragPendingX));
+      dragRaf=0;
+    });
+  });
+  scale.addEventListener('pointerup',()=>{dragging=false;});
+  scale.addEventListener('pointercancel',()=>dragging=false);
+
+  scale.addEventListener('mousemove',e=>{
+    if(dragging)return;
+    const preview=valueFromPointer(scale,e.clientX);
+    row.querySelectorAll('.scale-segment').forEach(seg=>{
+      seg.classList.toggle('preview',Number(seg.dataset.value)<=preview&&!seg.classList.contains('active'));
+    });
+  });
+  scale.addEventListener('mouseleave',()=>{
+    row.querySelectorAll('.scale-segment').forEach(seg=>seg.classList.remove('preview'));
+  });
+
+  scale.addEventListener('keydown',e=>{
+    const current=Number(row.querySelector('.rating-value-input').value)||1;
+    if(['ArrowRight','ArrowUp'].includes(e.key)){
+      e.preventDefault();
+      setRating(row,Math.min(5,current+1));
+    }else if(['ArrowLeft','ArrowDown'].includes(e.key)){
+      e.preventDefault();
+      setRating(row,Math.max(1,current-1));
+    }else if(/[1-5]/.test(e.key)){
+      setRating(row,Number(e.key));
+    }
+  });
+});
+
+function starText(n){
+  n=Number(n)||0;
+  return `${'★'.repeat(n)}${'☆'.repeat(5-n)} ${n}/5`;
+}
+
+
+// V27 — fallback simples e robusto: qualquer clique/toque numa estrela define a nota.
+document.querySelectorAll('.rating-scale').forEach(scale=>{
+  const row=scale.closest('.rating-row');
+
+  const chooseFromTarget=(target)=>{
+    const seg=target?.closest?.('.scale-segment');
+    if(!seg || !row)return;
+    setRating(row,Number(seg.dataset.value));
+  };
+
+  scale.addEventListener('click',e=>{
+    chooseFromTarget(e.target);
+  },true);
+
+  scale.addEventListener('pointerup',e=>{
+    const el=document.elementFromPoint(e.clientX,e.clientY);
+    chooseFromTarget(el);
+  });
+
+  scale.addEventListener('touchend',e=>{
+    const t=e.changedTouches && e.changedTouches[0];
+    if(!t)return;
+    const el=document.elementFromPoint(t.clientX,t.clientY);
+    chooseFromTarget(el);
+  },{passive:true});
+});
+
+// Mesma garantia para a nota geral.
+const chooseOverallFromTarget=(target)=>{
+  const seg=target?.closest?.('.overall-segment');
+  if(seg)setOverallRating(Number(seg.dataset.value));
+};
+overallScale.addEventListener('click',e=>chooseOverallFromTarget(e.target),true);
+overallScale.addEventListener('pointerup',e=>{
+  const el=document.elementFromPoint(e.clientX,e.clientY);
+  chooseOverallFromTarget(el);
+});
+
+function refreshSpreadsheetFields(){
+  const values={};
+  ['atendimento','ambiente','musico','bebidas','conforto'].forEach(key=>{
+    values[key]=form.querySelector(`[name="nota_${key}"]`)?.value||'';
+  });
+
+  document.getElementById('excel-atendimento').value=values.atendimento?starText(values.atendimento):'';
+  document.getElementById('excel-ambiente').value=values.ambiente?starText(values.ambiente):'';
+  document.getElementById('excel-musico').value=values.musico?starText(values.musico):'';
+  document.getElementById('excel-bebidas').value=values.bebidas?starText(values.bebidas):'';
+  document.getElementById('excel-conforto').value=values.conforto?starText(values.conforto):'';
+
+  const geral=overallInput.value||'';
+  document.getElementById('excel-geral').value=geral?starText(geral):'';
+
+  const nums=Object.values(values).filter(Boolean).map(Number);
+  if(nums.length){
+    const avg=nums.reduce((a,b)=>a+b,0)/nums.length;
+    document.getElementById('excel-media').value=avg.toFixed(1);
+    document.getElementById('excel-resumo').value=
+      `Geral: ${geral||'-'}/5 | Atendimento: ${values.atendimento||'-'}/5 | Ambiente: ${values.ambiente||'-'}/5 | Músico/Banda: ${values.musico||'-'}/5 | Bebidas: ${values.bebidas||'-'}/5 | Conforto: ${values.conforto||'-'}/5 | Média categorias: ${avg.toFixed(1)}/5 | Voltaria: ${form.querySelector('[name="voltaria"]:checked')?.value||'-'}`;
+  }else{
+    document.getElementById('excel-media').value='';
+    document.getElementById('excel-resumo').value=geral ? `Geral: ${geral}/5 | Voltaria: ${form.querySelector('[name="voltaria"]:checked')?.value||'-'}` : '';
+  }
+}
+
+nameInput.addEventListener('input',()=>{
+  nameInput.classList.remove('invalid');
+  document.getElementById('name-error').textContent='';
+});
+
+suggestion.addEventListener('input',()=>{
+  charCount.textContent=`${suggestion.value.length} / 300`;
+});
+
+form.querySelectorAll('[name="voltaria"]').forEach(input=>{
+  input.addEventListener('change',()=>{
+    returnCard.classList.remove('invalid');
+    returnError.textContent='';
+    refreshSpreadsheetFields();
+  });
+});
+
+
+function resetSurveyState(){
+  form.reset();
+
+  // Dados e telefone
+  nameInput.classList.remove('invalid');
+  phoneControl.classList.remove('invalid','country-detected');
+  phoneStatus.textContent='';
+  phoneStatus.className='phone-status';
+  phoneInput.value='';
+  phoneNormalized.value='';
+  phoneCountry.value='';
+  selectPhoneCountry(countryByIso('PY'),{focus:false});
+
+  // Nota geral
+  overallInput.value='';
+  overallRating.classList.remove('has-value','five-star');
+  overallRating.removeAttribute('data-score');
+  overallResult.textContent='Ainda sem nota';
+  overallScale.setAttribute('aria-valuenow','0');
+  overallScale.querySelectorAll('.overall-segment').forEach(seg=>{
+    seg.classList.remove('active','preview');
+    const star=seg.querySelector('.overall-star');
+    if(star){
+      star.style.removeProperty('color');
+      star.style.removeProperty('opacity');
+      star.style.removeProperty('filter');
+      star.style.removeProperty('text-shadow');
+      star.style.removeProperty('transform');
+    }
+  });
+
+  // Notas por categoria
+  document.querySelectorAll('.rating-row').forEach(row=>{
+    row.classList.remove('has-value','five-star');
+    row.removeAttribute('data-score');
+    const input=row.querySelector('.rating-value-input');
+    if(input)input.value='';
+    const result=row.querySelector('.rating-result');
+    if(result)result.textContent='Sem nota';
+    const scale=row.querySelector('.rating-scale');
+    if(scale)scale.setAttribute('aria-valuenow','0');
+    row.classList.remove('required-invalid');
+    row.querySelectorAll('.scale-segment').forEach(seg=>{
+      seg.classList.remove('active','preview');
+      const star=seg.querySelector('.grow-star');
+      if(star){
+        star.style.removeProperty('color');
+        star.style.removeProperty('opacity');
+        star.style.removeProperty('filter');
+        star.style.removeProperty('text-shadow');
+        star.style.removeProperty('transform');
+      }
+    });
+  });
+
+  // Comentário, chips, contadores, erros e retorno
+  suggestion.value='';
+  suggestion.classList.remove('invalid');
+  charCount.textContent='0 / 300';
+  commentPrompt.textContent='Conte um pouco mais sobre sua experiência.';
+
+  document.querySelectorAll('.feedback-chip input').forEach(input=>{input.checked=false;});
+  document.querySelectorAll('.feedback-followup').forEach(el=>el.classList.remove('show'));
+
+  document.querySelectorAll('.error').forEach(el=>el.textContent='');
+  overallRating.classList.remove('required-invalid');
+  returnCard.classList.remove('invalid');
+
+  // Limpa explicitamente todos os hidden gerados durante o envio.
+  [
+    'date-hca','time-hca','timestamp-iso','phone-normalized','phone-country',
+    'excel-atendimento','excel-ambiente','excel-musico','excel-bebidas',
+    'excel-conforto','excel-media','excel-geral','excel-resumo'
+  ].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.value='';
+  });
+
+  refreshSpreadsheetFields();
+  responseIdInput.value=makeResponseId();
+  startedAtInput.value=new Date().toISOString();
+  responseSecondsInput.value='';
+  if(successReference)successReference.textContent='REGISTRO';
+  premiumProgress();
+
+  // Sempre volta para a tela principal em português e pronta para o próximo cliente
+  applyLanguage('pt');
+  closePhoneCountryMenu();
+  if(typeof closeLanguageMenu==='function')closeLanguageMenu();
+  successBox.classList.remove('show');
+  form.classList.remove('hide');
+  submitButton.disabled=false;
+  submitButton.classList.remove('loading');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function validationText(key){
+  const messages={
+    pt:{comment:'Escreva um comentário para concluir a avaliação.'},
+    es:{comment:'Escribe un comentario para completar la evaluación.'},
+    en:{comment:'Write a comment to complete the review.'},
+    gn:{comment:'Ehai peteĩ ñe’ẽ remohu’ã hag̃ua pe ñemomba’e.'}
+  };
+  return messages[currentLang]?.[key]||messages.pt[key];
+}
+
+function goToRequired(target){
+  if(!target)return;
+  const el=target.closest?.('.field-card,.overall-rating,.rating-row,.return-card,.section')||target;
+  const headerOffset=86;
+  const top=Math.max(0,el.getBoundingClientRect().top+window.scrollY-headerOffset);
+  window.scrollTo({top,behavior:'smooth'});
+  window.setTimeout(()=>{
+    if(target.matches?.('input,textarea,button,[tabindex]')){
+      try{target.focus({preventScroll:true})}catch(_){target.focus()}
+    }
+  },380);
+}
+
+function validate(){
+  let ok=true;
+  let firstInvalid=null;
+  const nameError=document.getElementById('name-error');
+  const phoneError=document.getElementById('phone-error');
+  const commentError=document.getElementById('comment-error');
+
+  if(nameError)nameError.textContent='';
+  if(phoneError)phoneError.textContent='';
+  if(commentError)commentError.textContent='';
+  ratingsError.textContent='';
+  submitError.textContent='';
+  nameInput.classList.remove('invalid');
+  suggestion.classList.remove('invalid');
+  phoneControl.classList.remove('invalid');
+  returnError.textContent='';
+  returnCard.classList.remove('invalid');
+  overallRating.classList.remove('required-invalid');
+  document.querySelectorAll('.rating-row.required-invalid').forEach(row=>row.classList.remove('required-invalid'));
+
+  // Nome, WhatsApp, comentário e intenção de retorno são opcionais.
+  // Se o visitante preencher o WhatsApp, apenas normalizamos quando ele estiver válido.
+  if(phoneInput.value.trim()){
+    updatePhone(false);
+  }else{
+    phoneNormalized.value='';
+    phoneCountry.value='';
+    phoneStatus.textContent='';
+    phoneStatus.className='phone-status';
+  }
+
+  // Somente as avaliações por estrelas são obrigatórias.
+  if(!overallInput.value){
+    ratingsError.textContent=t('Dê uma nota geral para sua experiência.');
+    overallRating.classList.add('required-invalid');
+    firstInvalid=firstInvalid||overallScale;
+    ok=false;
+  }
+
+  const missingInput=[...form.querySelectorAll('.rating-value-input')].find(input=>!input.value);
+  if(missingInput){
+    ratingsError.textContent=t('Avalie Atendimento, Ambiente, Músico (Banda), Bebidas e Conforto.');
+    const row=missingInput.closest('.rating-row');
+    if(row)row.classList.add('required-invalid');
+    firstInvalid=firstInvalid||(row?.querySelector('.rating-scale')||row||missingInput);
+    ok=false;
+  }
+
+  if(!ok)goToRequired(firstInvalid);
+  return ok;
+}
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(!validate())return;
+
+  // WhatsApp é opcional. Se informado e válido, salva normalizado; se vazio, segue normalmente.
+  if(phoneInput.value.trim()){
+    updatePhone(false);
+  }else{
+    phoneNormalized.value='';
+    phoneCountry.value='';
+  }
+  setHcaTimestamp();
+  responseSecondsInput.value=String(Math.max(1,Math.round((Date.now()-new Date(startedAtInput.value).getTime())/1000)));
+  viewportSizeInput.value=`${innerWidth}x${innerHeight}`;
+  updateNetworkState();
+  if(!navigator.onLine){submitError.textContent=t('Sem conexão. Reconecte-se para enviar sua avaliação.');return;}
+  refreshSpreadsheetFields();
+  submitButton.disabled=true;
+  submitButton.classList.add('loading');
+
+  try{
+    if(!HCA_ENDPOINT || HCA_ENDPOINT.includes('COLE_AQUI')){
+      throw new Error('Endpoint do Google Apps Script ainda não configurado.');
+    }
+    const fd=new FormData(form);
+    const res=await fetch(HCA_ENDPOINT,{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+      body:new URLSearchParams(fd).toString(),
+      cache:'no-store',
+      keepalive:true
+    });
+    if(!res.ok)throw new Error('Falha no envio');
+    const result=await res.json().catch(()=>({ok:true}));
+    if(result && result.ok===false)throw new Error(result.error||'Falha no envio');
+    form.classList.add('hide');
+    successBox.classList.add('show');
+    if(successReference)successReference.textContent=responseIdInput.value;
+    if(completionFill)completionFill.style.width='100%';
+    window.scrollTo({top:0,behavior:'smooth'});
+
+    // Mostra a confirmação por alguns segundos e volta limpo para a tela principal.
+    // O reset é manual para impedir que o navegador restaure campos antigos.
+    window.setTimeout(()=>{
+      resetSurveyState();
+    },3200);
+  }catch(e){
+    submitError.textContent=e?.message?.includes('Endpoint') ? (t('Configuração de envio ainda não concluída.')) : (t('Não foi possível enviar agora. Verifique sua conexão e tente novamente.'));
+    submitButton.disabled=false;
+    submitButton.classList.remove('loading');
+  }
+});
+
+
+const languageSwitch=document.getElementById('language-switch');
+const languageTrigger=document.getElementById('language-trigger');
+function openLanguageMenu(){languageSwitch.classList.add('open');languageTrigger.setAttribute('aria-expanded','true')}
+function closeLanguageMenu(){languageSwitch.classList.remove('open');languageTrigger.setAttribute('aria-expanded','false')}
+languageTrigger.addEventListener('click',e=>{e.stopPropagation();languageSwitch.classList.contains('open')?closeLanguageMenu():openLanguageMenu()});
+document.querySelectorAll('.language-option').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
+document.addEventListener('click',e=>{if(!e.target.closest('#language-switch'))closeLanguageMenu()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLanguageMenu()});
+capturePortuguese();
+applyLanguage(initialLang);
+
+</script>
+</body>
+</html>
